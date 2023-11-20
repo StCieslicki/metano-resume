@@ -66,7 +66,7 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   │   ├── project-1.md
 │   │   │   ├── project-1.md
 │   │   │   └── ...
-│   │   └-- config.ts
+│   │   └-- data.ts
 │   ├── layouts/
 │   │   ├── Layout.astro
 │   ├── pages/

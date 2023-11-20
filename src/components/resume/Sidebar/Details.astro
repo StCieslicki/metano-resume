@@ -1,0 +1,26 @@
+---
+import { details } from "../../../data/data";
+
+const { address, phone, email } = details;
+---
+<div class="mb-10">
+    <h1 class="uppercase font-bold text-xl">Details</h1>
+    <div class="border-t-4 w-11"></div>
+
+    <h2 class="uppercase font-bold text-base mt-3">Address</h2>
+    <div class="text-tiny">
+        {address.map((line, index) => (
+            <p key={index}>{line}</p>
+        ))}
+    </div>
+
+    <h2 class="uppercase font-bold text-base mt-3">Phone</h2>
+    <div class="text-tiny">
+        <p>{phone}</p>
+    </div>
+
+    <h2 class="uppercase font-bold text-base mt-3">Email</h2>
+    <div class="text-tiny">
+        <p>{email}</p>
+    </div>
+</div>
