@@ -10,7 +10,7 @@ async function generatePDF() {
 //     await page.goto('https://example.com');
     await page.goto('https://metano-resume.onrender.com/');
 // Generate PDF and save it
-    await page.pdf({ path: './build/download/cv.pdf', format: 'A4' });
+    await page.pdf({ path: './public/download/cv.pdf', format: 'A4' });
 // Close the browser
     await browser.close();
 }
