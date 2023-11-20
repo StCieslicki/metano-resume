@@ -1,7 +1,14 @@
 ---
-import heroImage from '@assets/images/hero.png';
+// import heroImage from '@assets/images/hero.png';
+import heroImage from '@assets/images/_e0da0329-bf0a-4b2e-b636-5157352226f4.jpg';
 import { Image } from '@astrojs/image/components';
 import Button from '@components/ui/Button.astro';
+
+import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <section
@@ -11,12 +18,12 @@ import Button from '@components/ui/Button.astro';
 	<div class="mb-10 flex flex-col items-center lg:mb-0 lg:w-1/2">
 		<div>
 			<h1 class="mb-10 font-monospace text-3xl text-black dark:text-white lg:text-5xl">
-				Hi! My name is <span class="text-orange">Staszek Cieślicki</span> and I am a web developer based in New
-				York.
+				{`${t('hero.title1')}`} <span class="text-orange">Staszek Cieślicki</span>	{`${t('hero.title2')}`}
+
 			</h1>
 		</div>
 		<div class="mb-10">
-			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">Learn more</Button>
+			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">{`${t('hero.more')}`}</Button>
 		</div>
 	</div>
 	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">

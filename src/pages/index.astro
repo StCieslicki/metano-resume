@@ -5,10 +5,29 @@ import Hero from '@components/Hero.astro';
 import Projects from '@components/Projects.astro';
 import BackToTop from '@components/ui/BackToTop.astro';
 import Layout from '@layouts/Layout.astro';
+
+// const { request } = Astro.request;
+
+// const result = JSON.stringify(request);
+
+const search = Astro.url.searchParams.get('search')! || '';
+
 ---
+<script>
+	const urlSearchParams = new URLSearchParams(window.location.search);
+	const params = Object.fromEntries(urlSearchParams.entries());
+	console.log('params', params);
+</script>
+
 
 <Layout>
 	<main>
+		<div>
+			<p>Received a {Astro.request.method} request to "{Astro.request.url}".</p>
+			<p>Received request headers: <code>{JSON.stringify(Object.fromEntries(Astro.request.headers))}</code>
+			<p>Received request query: <code>{JSON.stringify(search)}</code>
+		</div>
+
 		<Hero />
 		<About />
 		<Projects />
