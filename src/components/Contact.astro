@@ -1,6 +1,11 @@
 ---
 import Button from '@components/ui/Button.astro';
 import Social from '@components/ui/Social.astro';
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section
@@ -8,7 +13,7 @@ import Social from '@components/ui/Social.astro';
 	id="contact"
 	class="flex flex-col flex-wrap items-center justify-center gap-8 text-black dark:text-white lg:mb-0 lg:h-screen"
 >
-	<Button size={'lg'} style={'primary'} name="Contact">Say hello!</Button>
+	<Button size={'lg'} style={'primary'} name="Contact">{`${t('contact.title')}`}</Button>
 	<hr class="w-1/2" />
 	<div class="flex flex-col gap-8 lg:flex lg:flex-row lg:gap-20">
 		<Social />
