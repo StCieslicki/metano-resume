@@ -1,22 +1,21 @@
 ---
 import { Icon } from 'astro-icon';
----
+import { links } from '../../data/data';
 
-<a href="https://github.com/StCieslicki" target="_blank" rel="noopener" aria-label="github"
-	><Icon
-		class="h-8 hover:text-orange dark:hover:text-orange md:h-12"
-		name="simple-icons:github"
-	/></a
->
-<a href="https://www.linkedin.com/in/staszek-cieslicki/" target="_blank" rel="noopener" aria-label="linkedin"
-	><Icon
-		class="h-8 hover:text-orange dark:hover:text-orange md:h-12"
-		name="simple-icons:linkedin"
-	/></a
->
-<a href="https://twitter.com/StCieslicki" target="_blank" rel="noopener" aria-label="twitter"
-	><Icon
-		class="h-8 hover:text-orange dark:hover:text-orange md:h-12"
-		name="simple-icons:twitter"
-	/></a
->
+const data = links
+	.filter(item => item.enabled === true)
+	.sort((a, b) => a.priority - b.priority)
+---
+{
+	data.map(item => (
+	<>
+		<a href={item.url} target="_blank" rel="noopener" aria-label={item.ariaLabel}
+		><Icon
+			class="h-8 hover:text-orange dark:hover:text-orange md:h-12"
+			name={item.icon}
+		/></a>
+
+	</>
+	))
+}
+

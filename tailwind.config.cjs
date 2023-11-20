@@ -16,12 +16,13 @@ module.exports = {
 			black: '#000',
 			white: '#fff',
 			orange: '#E06330',
+			gray: 'rgba(0,0,0,0.25)',
 		},
 		fontFamily: {
 			// Headings
-			sans: ['Inter', 'sans-serif'],
+			sans: ['Montserrat', 'sans-serif'],
 			// Base text
-			monospace: ['Inconsolata', 'monospace'],
+			monospace: ['Montserrat', 'sans-serif'],
 		},
 		fontSize: {
 			xs: '.75rem',
@@ -34,6 +35,8 @@ module.exports = {
 			'3xl': '1.875rem',
 			'4xl': '2.25rem',
 			'5xl': '3rem',
+			'6xl': '4rem',
+			'7xl': '5rem',
 		},
 		letterSpacing: {
 			wide: '.025em',

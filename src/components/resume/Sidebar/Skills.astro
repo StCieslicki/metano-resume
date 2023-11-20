@@ -1,0 +1,28 @@
+---
+import { skills } from "../../../data/data";
+
+// sort by weight
+// const data = skills.sort((a, b) => b.weight - a.weight)
+
+// sort by since
+// const data = skills.sort((a, b) => b.since - a.since)
+
+// sort by priority
+const data = skills.sort((b, a) => b.priority - a.priority)
+
+---
+<div class="mb-20 w-full">
+    <h1 class="uppercase font-bold text-3xl">Skills</h1>
+    <div class="border-t-4 mb-10 w-11" ></div>
+
+    {
+        data.map((item) => (
+                <>
+                    <div class="border-b-8 mb-5 pb-3">
+                        <p>{item.name} ({item.weight}%)</p>
+                    </div>
+                </>
+            )
+        )
+    }
+</div>

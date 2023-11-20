@@ -1,0 +1,21 @@
+---
+import { languages } from "../../../data/data";
+
+const data = languages;
+
+//todo fixme: linijka z postępem
+---
+<div class="mb-20">
+    <h1 class="uppercase font-bold text-3xl">Languages</h1>
+    <div class="border-t-4 mb-10 w-11" ></div>
+
+    {
+        data.map((item) => (
+                <>
+                    <div class="border-b-8 mb-5 pb-3">
+                        <p>{item.name}</p>
+                    </div>
+                </>
+        ))
+    }
+</div>
