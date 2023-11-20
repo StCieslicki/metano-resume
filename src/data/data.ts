@@ -38,6 +38,7 @@ export const education = [
         place: 'Wrocław',
         since: '1997.10.01',
         until: '2004.01.20',
+        summary: true,
         description: [
             'all IT subjects completed with the highest grade',
             'studies interrupted due to personal difficulties and pointlessness of further study of chemistry'

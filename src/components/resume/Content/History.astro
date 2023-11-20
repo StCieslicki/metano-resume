@@ -6,7 +6,6 @@ const url = Astro.url.toString();
 let data = [];
 
 if (url.indexOf('-ext') < 0) {
-
     data = history.filter((item) => item.summary);
 } else {
     data = history;
