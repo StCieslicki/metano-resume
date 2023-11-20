@@ -3,6 +3,10 @@ import Footer from '@components/Footer.astro';
 import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
 
+import "bootstrap/dist/css/bootstrap.min.css";
+// import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+
+
 import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 

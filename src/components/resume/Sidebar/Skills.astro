@@ -1,5 +1,5 @@
 ---
-import { skills } from "../../../data/data";
+import { skills } from "../../../data/skills";
 
 // sort by weight
 // const data = skills.sort((a, b) => b.weight - a.weight)
@@ -12,14 +12,18 @@ const data = skills.sort((b, a) => b.priority - a.priority)
 
 ---
 <div class="mb-20 w-full">
-    <h1 class="uppercase font-bold text-3xl">Skills</h1>
-    <div class="border-t-4 mb-10 w-11" ></div>
+    <h1 class="uppercase font-bold text-xl">Skills</h1>
+    <div class="border-t-4 mb-4 w-11" ></div>
 
     {
         data.map((item) => (
                 <>
-                    <div class="border-b-8 mb-5 pb-3">
-                        <p>{item.name} ({item.weight}%)</p>
+                    <div class='text-tiny'>
+                        <p>{item.name}</p>
+                    </div>
+                    <div class="progress mb-3" style="height: 10px;">
+                        <!-- <div class="progress-bar bg-black" role="progressbar" style=`width: ${item.weight}%` aria-valuenow={item.weight} aria-valuemin="0" aria-valuemax="100">{item.weight}%</div> -->
+                        <div class="progress-bar bg-black" role="progressbar" style=`width: ${item.weight}%` aria-valuenow={item.weight} aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </>
             )

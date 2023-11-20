@@ -1,7 +1,24 @@
 ---
+import { technologies } from "../../../data/technologies";
+import { stylize } from "../../../utils/utils";
+
 ---
 
-<div class="mb-20 pl-10">
-    <h1 class="uppercase font-bold text-3xl">Technologies</h1>
-    <div class="border-t-4 mb-10 w-11"></div>
+<div class="mb-10 pl-10">
+    <h1 class="uppercase font-bold text-xl">Technologies</h1>
+    <div class="border-t-4 mb-4 w-11"></div>
+
+    <ul style="list-style-type:disc;" class="ml-10 text-tiny">
+    {
+        technologies.map((item) => (
+                <>
+                    <li class="pb-1" >
+                        <span class="italic">{item.subject}:</span>
+                        <span set:html={stylize(item.description)} />
+                    </li>
+                </>
+        )
+        )
+        }
+    </ul>
 </div>

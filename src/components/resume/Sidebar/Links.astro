@@ -1,5 +1,5 @@
 ---
-import { links } from "../../../data/data";
+import { links } from "../../../data/liks";
 import {Icon} from "astro-icon";
 
 const data = links
@@ -8,12 +8,12 @@ const data = links
 
 ---
 <div class="mb-20">
-<h1 class="uppercase font-bold text-3xl">Links</h1>
-    <div class="border-t-4 mb-10 w-11" ></div>
+<h1 class="uppercase font-bold text-xl">Links</h1>
+    <div class="border-t-4 mb-4 w-11" ></div>
 
     {
         data.map(item => (
-                <p class="pb-5 underline">
+                <p class="pb-2 underline text-tiny">
                     <a href={item.url} target="_blank" rel="noopener" aria-label={item.ariaLabel}
                     >{item.name}</a>
 

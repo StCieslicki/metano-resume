@@ -1,8 +1,54 @@
 ---
+import { hobbies } from "../../../data/hobbies";
+import { stylize } from "../../../utils/utils";
+
 ---
 
-<div class="mb-20 pl-10">
-    <h1 class="uppercase font-bold text-3xl">Hobby</h1>
-    <div class="border-t-4 mb-10 w-11"></div>
+<div class="mb-10 pl-10">
+    <h1 class="uppercase font-bold text-xl">Hobby</h1>
+    <div class="border-t-4 mb-4 w-11 "></div>
 
+    <!-- <ul style="list-style-type:disc;" class="ml-10"> -->
+    <ul class="text-tiny">
+        {
+            hobbies.map((item) => (
+                            <>
+                                <li class="pb-1" >
+                                    <span class="text-base">{item.name}</span>
+
+                                    <ul style="list-style-type:disc;" class="ml-10 pt-2">
+                                    {
+                                        item.content.map((item2) => (
+                                            <>
+                                                <li class="pb-1">
+                                                    <span set:html={stylize(item2.subject)} />
+
+                                                    {!Array.isArray(item2.description) && item2.description &&
+                                                            <>
+                                                                <span set:html={stylize(item2.description)} />
+                                                            </>
+                                                    }
+
+                                                    {Array.isArray(item2.description) &&
+                                                            <>
+                                                                <ul style="list-style-type:disc;" class="ml-10 pt-2">
+                                                                    {item2.description.map((item3) => (
+                                                                            <li set:html={stylize(item3)} />
+                                                                    ))}
+                                                                </ul>
+                                                            </>
+                                                    }
+                                                </li>
+                                            </>
+                                        ))
+                                    }
+                                    </ul>
+                                </li>
+                            </>
+                )
+            )
+        }
+    </ul>
+
+    <div class="border-b-2 border-b-gray mt-3"></div>
 </div>
