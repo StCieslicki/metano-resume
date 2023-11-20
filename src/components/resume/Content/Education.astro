@@ -14,7 +14,7 @@ import { preformatDate } from "../../../utils/utils";
                 {item.place && <div>{item.place}</div>}
                 <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
                 {item.description &&
-                    <ul style="list-style-type:disc;" class="ml-10 pt-2 text-tiny">
+                    <ul style="list-style-type:disc;" class="ml-10 pt-2 text-xs">
                         {item.description.map((desc) => (
                             <li>{desc}</li>
                         ))}

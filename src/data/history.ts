@@ -1,13 +1,49 @@
-export const history = [
+const nodejs = [
     {
         subject: 'Software Engineer at Rignier Axel Springer Tech',
         place: 'remote/stationary (Wrocław)',
         since: '2022.01.03',
         until: '2023.12.31',
+        summary: true,
         description: [
-            '_Technologies_: *Node.js*/Typescript, *React*, *AWS*: dynamoDB, Lambda, S3, SQS, use of AI (*ChatGPT*) for modules, *Postgresql*, highly distributed architecture, microservices, *Bamboo CI/CD*, *Jira*, Figma (as a reader).',
-            '_Responsibilities_:',
-            '_Achievements_:',
+            '_Technologies_: ' +
+                '*Node.js*/Typescript, ' +
+                '*React*, ' +
+                '*AWS*: dynamoDB, Lambda, S3, SQS, ' +
+                'use of AI (*ChatGPT*) for modules, ' +
+                '*Postgresql*, ' +
+                'highly distributed architecture, ' +
+                'microservices, ' +
+                '*Bamboo CI/CD*, ' +
+                '*Jira*, ' +
+                'Figma (as a reader).',
+            '_Responsibilities_: ' +
+                'Building and managing: _REST - like_ *AWS Lambda APIs*,' +
+                ' *modules frontend*,' +
+                ' *modules backend*,' +
+                ' *CI/CD*,' +
+                ' *modules that use AI*,' +
+                ' databases,' +
+                ' documentation,' +
+                ' tests,' +
+                ' monitoring,' +
+                ' deployment.',
+            // ' building and managing infrastructure,' +
+            // ' building and managing architecture,' +
+            // ' building and managing security,' +
+            // ' building and managing development environment,' +
+            // ' building and managing production environment,' +
+            // ' building and managing staging environment,' +
+            // ' building and managing development process,' +
+            // ' building and managing development tools,' +
+            // ' building and managing development standards,' +
+            // ' building and managing development guidelines,' +
+            // ' building and managing development patterns,' +
+            // ' building and managing development practices,' +
+            // ' building and managing development culture,' +
+            // ' building and managing development team,' +
+            // ' building and managing development company.',
+            // '_Achievements_:',
             '_Individual working time_: *fulltime*, team: *5* people'
         ]
     },
@@ -16,6 +52,7 @@ export const history = [
         place: 'Gdynia - remote',
         since: '2021.06.01',
         until: '2021.12.31',
+        summary: true,
         description: [
             '_Technologies_: *Node.js*/Typescript, *Nest.js 7*, TypeORM, *Postgresql*',
             'Individual working time: *fulltime*, team: *2* people'
@@ -26,6 +63,7 @@ export const history = [
         place: 'Wrocław - stationary/remote',
         since: '2019.01.01',
         until: '2021.03.31',
+        summary: true,
         description: [
             'Ability to work independently as well as in a team environment.',
             'Problem Solving Skills.',
@@ -33,7 +71,26 @@ export const history = [
             'High level of technical competence.',
             'Collaborate with other team members to achieve success.',
             'Keep constantly updated theoretical and practical knowledge of technology.',
-            'Project management: Jira (company-owned, client-based).'
+            'Project management: Jira (company-owned, client-based).',
+
+            '_Technologies_: ' +
+                '*Node.js*/Typescript, ' +
+                'TypeORM, ' +
+                '*Postgresql*, ' +
+                '*Nest.js 7*, ' +
+                'express.js, ' +
+                'Prebid.js, ' +
+                'CI/CD: Bitbucket pipeline,' +
+                'CI/CD: Azure Pipelines' +
+                'AWS, ' +
+                'Azure, ' +
+                'Terraform, ' +
+                'Databricks, ' +
+                'docker, ' +
+                'traefik, ' +
+                'docker swarm, ' +
+                'docker compose, ',
+            '_Responsibility_: Building and managing REST APIs,'
         ]
     },
     {
@@ -82,11 +139,15 @@ export const history = [
             '_Individual working time_: *579 WMh*, team: about *10* people'
         ]
     },
+];
+
+const php = [
     {
         subject: 'Senior PHP Developer (summary) at clearcode.cc',
         place: 'Wrocław - stationary/remote',
         since: '2013.07.01',
         until: '2021.03.31',
+        summary: true,
         description: [
             'Ability to work independently as well as in a team environment.',
             'Problem Solving Skills.',
@@ -94,7 +155,39 @@ export const history = [
             'High level of technical competence.',
             'Collaborate with other team members to achieve success.',
             'Keep up to date with theoretical and practical knowledge of technology.',
-            'Project management: Jira (corporate, at client), Redmine (corporate, before Jira), Asana (at client)'
+            'Project management: Jira (corporate, at client), Redmine (corporate, before Jira), Asana (at client)',
+
+            '_Technologies_: ' +
+            'PHP 5, 7, ' +
+            'Symfony 3, 4, ' +
+            'Node.js/Typescript, ' +
+            'TypeOrm, ' +
+            'MySQL, ' +
+            'Msql, ' +
+            'Postgresql, ' +
+            'Angular (new frontend), ' +
+
+            'AWS' +
+            'Azure, ' +
+
+            'Video, ' +
+            'FTP, ' +
+            'Api Platform 1, ' +
+            'docker, ' +
+            'docker swarm, ' +
+            'kubernetes, ' +
+            'ELK, ' +
+            'Grafana, ' +
+            'RabbitMQ, ' +
+            'CI/CD: Bitbucket, ' +
+            'PHP pure OOP, w/o framework',
+
+            '_Responsibilities_: ' +
+            'backend development of near realtime reporting system for large amount of data (visits, clicks, conversions), maintenance, optimization, optimization of data aggregation in database, ' +
+            'Building and developing API, Implementing and rapidly building REST API with Api Platform (with Swagger), ' +
+            'Project planning, API and database schema, construction, API development, ' +
+            'modification and optimization of php code - backend, ' +
+            'development and code optimization of legacy php code, consulting'
         ]
     },
     {
@@ -186,26 +279,35 @@ export const history = [
         description: [
             '_Project_ taken over in development, old backend/frontend: CodeIgniter',
             '_Description_: Near real-time reporting system for an agency trading advertising traffic on the Internet',
-            '_Technologies_: PHP 5, Symfony 3 (nowy backend), MySQL, Angular (nowy frontend), AWS',
+            '_Technologies_: PHP 5, Symfony 3 (new backend), MySQL, Angular (new frontend), AWS',
             '_Responsibility_: backend development of near realtime reporting system for large amount of data (visits, clicks, conversions), maintenance, optimization, optimization of data aggregation in database',
             '_Achievements_: introduction to Sentry backend, motion support: 10-12 million clicks / 24h',
             '_Individual working time_: *3359 WMh*, team: *5-10* people'
         ]
     },
+];
+
+const wordpress = [
     {
         subject: 'Senior Wordpress Developer at clearcode.cc',
         place: 'Wrocław - stationary',
         since: '2013.07.01',
         until: '2015.05.31',
+        summary: true,
         description: [
             '_Description_: WordPress Multi User - one engine, one database, on separate subdomains and/or domains',
             'serving about 14 thousand pages (since 2009)',
             '_Technologies_: Wordpress 2.6, PHP 5, MySQL, HTML, CSS, Javascript',
-            '_Responsibility_: building and implementation of new solutions, plugins, skins, backend development, service',
+            '_Responsibilities_: building and implementation of new solutions, plugins, skins, backend development, service',
             '_Achievements_: Optimized Dashboard loading speed for admin from 60+ s to a few seconds, moved code base from SVN to Git with history continuity',
             '_Project management_: Redmine, then Jira',
             '_Individual working time_: *2269 WMh*, team: about *5* people'
         ]
     },
+];
 
+export const history = [
+    ...nodejs,
+    ...php,
+    ...wordpress
 ];
