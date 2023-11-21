@@ -1,4 +1,6 @@
-const nodejs = [
+import { Events } from "./types";
+
+const nodejs: Events = [
     {
         subject: 'Software Engineer at Rignier Axel Springer Tech',
         place: 'remote/stationary (Wrocław)',
@@ -141,7 +143,7 @@ const nodejs = [
     },
 ];
 
-const php = [
+const php: Events = [
     {
         subject: 'Senior PHP Developer (summary) at clearcode.cc',
         place: 'Wrocław - stationary/remote',
@@ -287,7 +289,7 @@ const php = [
     },
 ];
 
-const wordpress = [
+const wordpress: Events = [
     {
         subject: 'Senior Wordpress Developer at clearcode.cc',
         place: 'Wrocław - stationary',
@@ -306,7 +308,7 @@ const wordpress = [
     },
 ];
 
-export const history = [
+export const history: Events = [
     ...nodejs,
     ...php,
     ...wordpress

@@ -1,0 +1,12 @@
+---
+const { title, last } = Astro.props;
+---
+
+<div class="mb-10 pl-10">
+    <h1 class="uppercase font-bold text-xl">{title}</h1>
+    <div class="border-t-4 mb-4 w-11"></div>
+
+    <slot />
+
+    {!last && <div class="border-b-2 border-b-gray mt-3"></div>}
+</div>

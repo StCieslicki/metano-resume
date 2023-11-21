@@ -1,11 +1,11 @@
 ---
 import Footer from '@components/Footer.astro';
-import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 // import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
 
+import { header } from '../data/data'
 
 import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
@@ -14,7 +14,7 @@ export interface LayoutProps {
 	title: string;
 }
 
-const { title = 'Stanisław Cieślicki' } = Astro.props as LayoutProps;
+const { title = header.title } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>

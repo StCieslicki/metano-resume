@@ -1,20 +1,14 @@
 ---
 import { courses } from "../../../data/data";
 import { preformatDate } from "../../../utils/utils";
-
+import Block from "./Block.astro";
 ---
 
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">Courses</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
-
+<Block title="Courses">
     {
         courses.map((item) => (
                 <div>{item.subject}</div>
                 <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
         ))
     }
-
-    <div class="border-b-2 border-b-gray mt-3"></div>
-
-</div>
+</Block>

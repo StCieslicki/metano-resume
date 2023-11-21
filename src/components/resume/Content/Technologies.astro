@@ -1,24 +1,17 @@
 ---
 import { technologies } from "../../../data/technologies";
-import { stylize } from "../../../utils/utils";
-
+import Block from "./Block.astro";
+import List from "./List.astro";
+import ListItem from "./ListItem.astro";
 ---
 
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">Technologies</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
-
-    <ul style="list-style-type:disc;" class="ml-10 text-xs">
-    {
-        technologies.map((item) => (
-                <>
-                    <li class="pb-1" >
-                        <span class="italic">{item.subject}:</span>
-                        <span set:html={stylize(item.description)} />
-                    </li>
-                </>
-        )
-        )
+<Block title="Technologies" last="true">
+    <List>
+        {
+            technologies.map((item) => (
+                    <ListItem subject={item.subject} description={item.description} />
+                )
+            )
         }
-    </ul>
-</div>
+    </List>
+</Block>

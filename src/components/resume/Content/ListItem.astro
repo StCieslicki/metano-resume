@@ -1,0 +1,13 @@
+---
+import { stylize } from "../../../utils/utils";
+const { subject, description } = Astro.props;
+---
+
+<li class="pb-1" >
+    {!description && <span set:html={stylize(subject)} />}
+
+    {description &&
+            <span set:html={stylize(subject) + ': '} />
+            <span set:html={stylize(description)} />
+    }
+</li>

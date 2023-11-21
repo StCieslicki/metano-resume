@@ -1,22 +1,15 @@
 ---
 import { languages } from "../../../data/data";
+import Block from "./Block.astro";
+import Bar from "./Bar.astro";
 
 const data = languages;
 ---
-<div class="mb-20">
-    <h1 class="uppercase font-bold text-xl">Languages</h1>
-    <div class="border-t-4 mb-4 w-11" ></div>
 
+<Block title="Languages">
     {
         data.map((item) => (
-                <>
-                    <div class='text-tiny'>
-                        <p>{item.name}</p>
-                    </div>
-                    <div class="progress mb-3" style="height: 10px;">
-                        <div class="progress-bar bg-black" role="progressbar" style=`width: ${item.weight}%` aria-valuenow={item.weight} aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </>
+                <Bar title={item.name} value={item.weight} />
         ))
     }
-</div>
+</Block>

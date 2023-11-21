@@ -1,16 +1,28 @@
-export const header = {
+import { Events, SkillBase } from "./types";
+
+type Header = {
+    title: string;
+    subtitle: string
+};
+export const header: Header = {
     title: 'Stanisław Cieślicki',
     // subtitle: 'Full Stack Developer'
     subtitle: 'Node.js mid'
 };
 
-export const details = {
+type Details = {
+    address: string | string[];
+    phone: string;
+    email: string
+};
+export const details: Details = {
     address: ['ul. Rybnicka 21/17', '52-016 Wrocław', 'Poland'],
     phone: '+48 790 426 178',
     email: 'staszek@metano.pl'
 };
 
-export const languages = [
+type Languages = SkillBase[];
+export const languages: Languages = [
     {
         name: 'Polish (native)',
         weight: 100,
@@ -25,14 +37,14 @@ export const languages = [
     }
 ];
 
-
-export const profile = [
+type Profile = string[];
+export const profile: Profile = [
     'Experienced and professional software developer boasting many years (8+ years) of valuable experience in software development, and working with clouds, platforms and data structures.',
     'Confident in your abilities, reliable, hardworking, and committed to results.',
     'Willing to utilize his skills and put energy into his/her new position.'
 ];
 
-export const education = [
+export const education:Events = [
     {
         subject: 'no degree, Wrocław University of Technology, Department of Chemistry',
         place: 'Wrocław',
@@ -55,7 +67,7 @@ export const education = [
     },
 ];
 
-export const courses = [
+export const courses: Events = [
     {
         subject: 'Attacking and Protecting Web Applications, Niebezpiecznik.pl',
         since: '2019.05.19',

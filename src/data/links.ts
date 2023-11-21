@@ -1,4 +1,13 @@
-export const links = [
+type Links = {
+    name: string;
+    enabled: boolean;
+    priority: number;
+    since: number;
+    url: string;
+    ariaLabel: string;
+    icon: string
+}[];
+export const links: Links = [
     {
         name: 'GitHub',
         enabled: true,

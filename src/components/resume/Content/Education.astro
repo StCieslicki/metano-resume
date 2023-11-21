@@ -1,28 +1,24 @@
 ---
 import { education } from "../../../data/data";
 import { preformatDate } from "../../../utils/utils";
-
+import Block from "./Block.astro";
+import List from "./List.astro";
+import ListItem from "./ListItem.astro";
 ---
 
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">Education</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
-
+<Block title="Education">
     { education.map((item) => (
             <div class="mb-3">
                 <div class="text-base"><strong>{item.subject}</strong></div>
                 {item.place && <div>{item.place}</div>}
                 <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
                 {item.description &&
-                    <ul style="list-style-type:disc;" class="ml-10 pt-2 text-xs">
-                        {item.description.map((desc) => (
-                            <li>{desc}</li>
-                        ))}
-                    </ul>
+                        <List>
+                            {(item.description as string[]).map((desc) => (
+                                    <ListItem subject={desc} />
+                            ))}
+                        </List>
                 }
             </div>
     ))}
-
-    <div class="border-b-2 border-b-gray mt-3"></div>
-
-</div>
+</Block>

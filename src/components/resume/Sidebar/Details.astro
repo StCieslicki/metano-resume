@@ -1,16 +1,15 @@
 ---
 import { details } from "../../../data/data";
+import Block from "./Block.astro";
 
 const { address, phone, email } = details;
 ---
-<div class="mb-10">
-    <h1 class="uppercase font-bold text-xl">Details</h1>
-    <div class="border-t-4 w-11"></div>
 
+<Block title="Details">
     <h2 class="uppercase font-bold text-base mt-3">Address</h2>
     <div class="text-tiny">
-        {address.map((line, index) => (
-            <p key={index}>{line}</p>
+        {(address as string[]).map((line) => (
+                <p>{line}</p>
         ))}
     </div>
 
@@ -23,4 +22,4 @@ const { address, phone, email } = details;
     <div class="text-tiny">
         <p>{email}</p>
     </div>
-</div>
+</Block>

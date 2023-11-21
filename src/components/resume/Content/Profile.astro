@@ -1,21 +1,16 @@
 ---
 import { profile } from "../../../data/data";
+import Block from "./Block.astro";
+import List from "./List.astro";
+import ListItem from "./ListItem.astro";
 ---
 
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">Profile</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
-
+<Block title="Profile">
     <div class="text-tiny">
-        <ul style="list-style-type:disc;" class="ml-10 pt-2">
-
-        {profile.map((item) => (
-            <li>{item}</li>
-        ))}
-
-        </ul>
+        <List>
+            {profile.map((item) => (
+                    <ListItem subject={item} />
+            ))}
+        </List>
     </div>
-
-    <div class="border-b-2 border-b-gray mt-3"></div>
-
-</div>
+</Block>
