@@ -1,0 +1,15 @@
+---
+import Resume from "../layouts/Resume.astro";
+import Title from "../components/resume/Title.astro";
+import Sidebar from "../components/cover-letter/Sidebar.astro";
+import Content from "../components/cover-letter/Content.astro";
+---
+<Resume>
+    <main>
+        <Title />
+        <section class="flex">
+            <Sidebar />
+            <Content />
+        </section>
+    </main>
+</Resume>

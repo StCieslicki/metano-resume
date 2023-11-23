@@ -5,6 +5,9 @@ import { Image } from '@astrojs/image/components';
 import Button from '@components/ui/Button.astro';
 
 import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
+import Ribbon from "./Ribbon.astro";
+import RibbonR from "./RibbonR.astro";
+import {settings} from "../data/settings";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -26,7 +29,9 @@ const t = useTranslations(lang);
 			<Button style={'primary'} size={'lg'} class={'flex'} name="learn more">{`${t('hero.more')}`}</Button>
 		</div>
 	</div>
-	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">
+	<!--<div data-testid="hero-img" class="mb-10 flex w-1/2 items-center justify-center">-->
+	<div data-testid="hero-img" class="mb-10 flex w-1/2 items-top justify-center">
+		{settings.openToWork && settings.ribbon === "left" && <Ribbon />}
 		<Image
 			src={heroImage}
 			alt="Coding girl"
@@ -36,5 +41,6 @@ const t = useTranslations(lang);
 			height={600}
 			loading="eager"
 		/>
+		{settings.openToWork && settings.ribbon === "right" && <RibbonR />}
 	</div>
 </section>

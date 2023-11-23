@@ -6,7 +6,7 @@ import List from "./List.astro";
 import ListItem from "./ListItem.astro";
 ---
 
-<Block title="Education">
+<Block title="Education" class="break-inside-avoid-page">
     { education.map((item) => (
             <div class="mb-3">
                 <div class="text-base"><strong>{item.subject}</strong></div>

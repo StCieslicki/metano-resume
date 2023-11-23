@@ -3,6 +3,17 @@ import { header } from "../../data/data";
 
 const { title, subtitle } = header;
 ---
+<style>
+    .title {
+        @apply text-5xl font-bold uppercase w-1;
+    }
+    .subtitle {
+        @apply text-base font-normal;
+    }
+    .photo {
+        @apply flex-col text-black text-tiny;
+    }
+</style>
 
 <section
     data-testid="resume-title"
@@ -10,11 +21,11 @@ const { title, subtitle } = header;
     >
     <div class="flex-row items-start w-full">
         <div class="text-black dark:text-white flex-col">
-            <h1 class="text-5xl font-bold uppercase w-1">{title}</h1>
-            <h2 class="text-tiny font-normal">{subtitle}</h2>
+            <h1 class="title">{title}</h1>
+            <h2 class="subtitle">{subtitle}</h2>
         </div>
-        <div class="flex-col text-black text-tiny">
-            photo
-        </div>
+        <!--<div class="photo">-->
+        <!--    photo-->
+        <!--</div>-->
     </div>
 </section>

@@ -1,12 +1,22 @@
 ---
-const { title, last } = Astro.props;
----
+let underlined = '';
+let rest = '';
+const { title, last, class: className } = Astro.props;
+if (title && title.length > 2) {
+    [underlined, rest] = [title.slice(0, 2), title.slice(2)];
+}
 
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">{title}</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
+---
+<style>
+    .block-header-divider {
+        @apply border-b-2 border-b-gray mt-3;
+    }
+</style>
+<div class=`block pl-10 page ${className}`>
+    <h1 class="block-header"><span class="underline underline-offset-4 decoration-4">{underlined}</span>{rest}</h1>
+    {title && <div class="block-header-decoration"></div>}
 
     <slot />
 
-    {!last && <div class="border-b-2 border-b-gray mt-3"></div>}
+    {!last && <div class="block-header-divider"></div>}
 </div>

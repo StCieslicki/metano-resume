@@ -18,7 +18,7 @@ if (url.indexOf('extended') < 0) {
 
 <Block title="Employment history">
     { data.map((item) => (
-            <div class="mb-4">
+            <div class="mb-4 break-inside-avoid-page">
                 <div class="flex">
                     <div class="text-base flex-col" style="width: 66%"><strong>{item.subject}</strong></div>
                     {item.place && <div class="flex-col text-xs" style="width: 33%; text-align: right;">{item.place}</div>}

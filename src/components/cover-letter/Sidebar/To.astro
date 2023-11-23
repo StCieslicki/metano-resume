@@ -1,0 +1,8 @@
+---
+import { addresses } from "../../../data/coverLetter";
+
+const { to } = addresses;
+---
+<div class="mb-3 text-darkgray">To</div>
+<div class="mb-2 font-bold">{to.name.toUpperCase()}</div>
+<div>{to.place}</div>

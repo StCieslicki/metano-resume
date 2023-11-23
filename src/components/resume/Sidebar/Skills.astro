@@ -14,7 +14,7 @@ const data = skills.sort((b, a) => b.priority - a.priority)
 
 ---
 
-<Block title="Skills">
+<Block title="Skills" class="break-inside-avoid-page">
     {
         data.map((item) => (
                 <Bar title={item.name} value={item.weight} />

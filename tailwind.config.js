@@ -1,7 +1,7 @@
-const plugin = require('tailwindcss/plugin');
+import plugin from "tailwindcss/plugin.js";
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkMode: 'class',
 	theme: {
@@ -15,8 +15,11 @@ module.exports = {
 		colors: {
 			black: '#000',
 			white: '#fff',
-			orange: '#E06330',
+			// orange: '#E06330',
+			orange: 'rgba(224, 99, 48, 1)',
+			lightorange: 'rgba(224, 99, 48, 0.50)',
 			gray: 'rgba(0,0,0,0.25)',
+			darkgray: 'rgba(0,0,0,0.50)',
 		},
 		fontFamily: {
 			// Headings

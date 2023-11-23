@@ -4,22 +4,30 @@ import Block from "./Block.astro";
 
 const { address, phone, email } = details;
 ---
+<style is:global>
+    .details-block-header {
+        @apply uppercase font-bold text-base mt-3;
+    }
+    .block-text {
+        @apply text-tiny;
+    }
+</style>
 
 <Block title="Details">
-    <h2 class="uppercase font-bold text-base mt-3">Address</h2>
-    <div class="text-tiny">
+    <h2 class="details-block-header">Address</h2>
+    <div class="block-text">
         {(address as string[]).map((line) => (
                 <p>{line}</p>
         ))}
     </div>
 
-    <h2 class="uppercase font-bold text-base mt-3">Phone</h2>
-    <div class="text-tiny">
+    <h2 class="details-block-header">Phone</h2>
+    <div class="block-text">
         <p>{phone}</p>
     </div>
 
-    <h2 class="uppercase font-bold text-base mt-3">Email</h2>
-    <div class="text-tiny">
+    <h2 class="details-block-header">Email</h2>
+    <div class="block-text">
         <p>{email}</p>
     </div>
 </Block>

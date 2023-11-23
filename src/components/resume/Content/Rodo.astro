@@ -1,0 +1,19 @@
+---
+import Block from "./Block.astro";
+import {rodo} from "../../../data/data";
+import {gdpr} from "../../../data/data";
+import {preformatLongDate} from "../../../utils/utils";
+---
+<Block last="true">
+    <h2 class="details-block-header mb-2">{gdpr.title}</h2>
+    <div class="block-text">
+        <p class="mb-2 italic">{preformatLongDate(gdpr.date)}</p>
+        <p>{gdpr.description}</p>
+    </div>
+
+    <h2 class="details-block-header mb-2 mt-4">{rodo.title}</h2>
+    <div class="block-text">
+        <p class="mb-2 italic">{preformatLongDate(rodo.date)}</p>
+        <p>{rodo.description}</p>
+    </div>
+</Block>

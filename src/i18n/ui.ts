@@ -31,6 +31,8 @@ export const ui = {
         'projects.title': 'Projects',
         'projects.links': 'View full private projects archive',
         'contact.title': 'Say hello!',
+        'calendly.button': 'Schedule time with me',
+        'ribbon.name': 'Open to work',
     },
     pl: {
         'nav.home': 'Strona główna',
@@ -47,6 +49,8 @@ Tutaj jest twoje opis po polsku! Lorem ipsum dolor sit amet, consectetur adipisc
         'hero.more': 'Więcej',
         'projects.title': 'Projekty',
         'projects.links': 'Zobacz pełną listę prywatnych projektów',
-        'contact.title': 'Napisz do mnie!'
+        'contact.title': 'Napisz do mnie!',
+        'calendly.button': 'Umów ze mną spotkanie',
+        'ribbon.name': 'do wynajęcia',
     },
 } as const;

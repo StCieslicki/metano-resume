@@ -1,0 +1,14 @@
+---
+import { addresses } from "../../../data/coverLetter";
+
+const { from } = addresses;
+
+const classNameHeader = 'mt-10 {className} text-darkgray'
+const className = "mb-6";
+---
+<div class=`${classNameHeader} mb-6`>From</div>
+<div class="mb-2 font-bold">{from.name.toUpperCase()}</div>
+<div class={className}>{from.subtitle}</div>
+<div class={className}>{from.address}</div>
+<div class={className}>{from.phone}</div>
+<div class={className}>{from.email}</div>

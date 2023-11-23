@@ -21,5 +21,10 @@ export function preformatDate(date: string): string {
     const result = new Date(date);
 
     return result.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+}
 
+export function preformatLongDate(date: string): string {
+    const result = new Date(date);
+
+    return result.toLocaleDateString('pl-PL');
 }

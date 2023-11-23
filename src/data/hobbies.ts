@@ -42,7 +42,7 @@ const newTechnologies: Item[] = [
         subject: '*Fan of doing things \'before they were fashionable\'*, e.g. I was walrusing before it was fashionable (in 2019:)'
     },
     {
-        subject: '*Fan of listening to podcasts* (mostly crime, industry and science)'
+        subject: '*Fan of listening to podcasts* (mostly crime, industry and science)',
     }
 ];
 

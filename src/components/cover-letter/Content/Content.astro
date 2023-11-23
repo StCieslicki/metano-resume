@@ -1,0 +1,10 @@
+---
+import { getContent } from "../../../data/coverLetter";
+---
+<div class="mb-10 pl-10">
+    {
+        getContent().map((item) => (
+                <p class="mb-3">{item}</p>
+        ))
+    }
+</div>
