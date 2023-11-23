@@ -1,13 +1,14 @@
 import { Events, SkillBase } from "./types";
+import { header as simpleHeader } from "./simpleHeader.js";
 
 type Header = {
     title: string;
     subtitle: string
 };
+
+// to change Header - goto src/data/simpleHeader.ts
 export const header: Header = {
-    title: 'Stanisław Cieślicki',
-    subtitle: 'Full Stack Developer'
-    // subtitle: 'Node.js Senior Developer'
+    ...simpleHeader,
 };
 
 type Details = {

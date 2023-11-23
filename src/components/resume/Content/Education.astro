@@ -8,7 +8,7 @@ import ListItem from "./ListItem.astro";
 const url = Astro.url.toString();
 let data = [];
 
-if (url.indexOf('-ext') < 0) {
+if (url.indexOf('extended') < 0) {
     data = education.filter((item) => item.summary);
 } else {
     data = education;
