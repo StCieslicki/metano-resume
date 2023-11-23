@@ -1,4 +1,13 @@
-const newTechnologies = [
+type Item = {
+    subject: string;
+    description?: string | string[]
+};
+
+type Hobby = {
+    name: string;
+    content: Item[] };
+
+const newTechnologies: Item[] = [
     {
         subject: '*Insta360 X3*',
         description: 'camera owner &amp; fan - to creating videos of tours.'
@@ -33,11 +42,11 @@ const newTechnologies = [
         subject: '*Fan of doing things \'before they were fashionable\'*, e.g. I was walrusing before it was fashionable (in 2019:)'
     },
     {
-        subject: '*Fan of listening to podcasts* (mostly crime, industry and science)'
+        subject: '*Fan of listening to podcasts* (mostly crime, industry and science)',
     }
 ];
 
-const sport = [
+const sport: Item[] = [
     {
         subject: 'cycling - I took an active part in BikeMarathons',
     },
@@ -49,7 +58,7 @@ const sport = [
     }
 ];
 
-export const hobbies = [
+export const hobbies: Hobby[] = [
     {
         name: 'New technologies',
         content: newTechnologies

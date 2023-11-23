@@ -1,4 +1,13 @@
-export const links = [
+type Links = {
+    name: string;
+    enabled: boolean;
+    priority: number;
+    since: number;
+    url: string;
+    ariaLabel: string;
+    icon: string
+}[];
+export const links: Links = [
     {
         name: 'GitHub',
         enabled: true,
@@ -50,7 +59,8 @@ export const links = [
         enabled: true,
         priority: 60,
         since: 2015,
-        url: 'https://www.youtube.com/channel/UCBScXHGVH41ITor6itH5tOw',
+        // url: 'https://www.youtube.com/channel/UCBScXHGVH41ITor6itH5tOw',
+        url: 'http://youtube.com/stahoos',
         ariaLabel: 'youtube',
         icon: 'simple-icons:youtube'
     },

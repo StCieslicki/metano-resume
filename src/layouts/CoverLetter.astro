@@ -37,7 +37,7 @@ const { title = header.title } = Astro.props as LayoutProps;
 	>
 		<!--<Navbar />-->
 		<slot />
-		<!--<Footer />-->
+		<Footer />
 		<style is:global>
 			/* Improve Page speed */
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
@@ -47,15 +47,3 @@ const { title = header.title } = Astro.props as LayoutProps;
 		</style>
 	</body>
 </html>
-
-<style is:global>
-	.block {
-		@apply mb-10;
-	}
-	.block-header {
-		@apply uppercase font-bold text-xl;
-	}
-	.block-header-decoration {
-		@apply mb-4 w-11;
-	}
-</style>

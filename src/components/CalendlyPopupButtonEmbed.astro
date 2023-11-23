@@ -1,0 +1,33 @@
+---
+import { embeds } from "../data/data";
+import tailwind from "../../tailwind.config.js";
+import { settings } from "../data/settings";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const { username, eventType } = embeds.calendly;
+
+const { theme } = tailwind;
+const { colors } = theme;
+
+const colorName = 'orange';
+const textColorName = 'white';
+
+const color = colors[colorName];
+const textColor = colors[textColorName];
+const buttonName = t('calendly.button');
+
+const script = `
+window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/${username}/${eventType}', text: '${buttonName}', color: '${color}', textColor: '${textColor}', branding: true }); }
+`;
+---
+{ settings.calendly &&
+<!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript" set:html={script} />
+<!-- Calendly badge widget end -->
+}

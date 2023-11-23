@@ -1,0 +1,19 @@
+---
+import Resume from "../../layouts/Resume.astro";
+import Title from "../../components/resume/Title.astro";
+import Sidebar from "../../components/resume/Sidebar.astro";
+import Content from "../../components/resume/Content.astro";
+---
+
+<!-- nie działa -->
+<div class="text-xl">
+    <Resume>
+        <main>
+            <Title />
+            <section class="flex">
+                <Sidebar />
+                <Content />
+            </section>
+        </main>
+    </Resume>
+</div>

@@ -1,4 +1,10 @@
-export const skills = [
+import { SkillBase } from "./types";
+
+type Skills = (SkillBase & {
+    type: string
+})[];
+
+export const skills: Skills = [
     {
         name: 'Node.js',
         weight: 80,

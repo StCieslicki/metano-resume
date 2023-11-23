@@ -1,7 +1,10 @@
-const nodejs = [
+import { Events } from "./types";
+
+const nodejs: Events = [
     {
+        //summary
         subject: 'Software Engineer at Rignier Axel Springer Tech',
-        place: 'remote/stationary (Wrocław)',
+        place: 'Wrocław - remotely/stationary',
         since: '2022.01.03',
         until: '2023.12.31',
         summary: true,
@@ -48,19 +51,57 @@ const nodejs = [
         ]
     },
     {
-        subject: 'Mid Node.js at Jit.team',
-        place: 'Gdynia - remote',
+        //summary
+        subject: 'Mid Node.js (summary) at Jit.team and CX-Labs',
+        place: 'Gdynia/Vien - remotely',
         since: '2021.06.01',
         until: '2021.12.31',
         summary: true,
         description: [
+            'Node.js Backend development',
+            'Building and implementing new solutions',
+            'Implementation of best practices and patterns',
+            'Code refactoring and optimisation',
+            'Building and implementing e2e tests, from scratch on existong code',
             '_Technologies_: *Node.js*/Typescript, *Nest.js 7*, TypeORM, *Postgresql*',
             'Individual working time: *fulltime*, team: *2* people'
         ]
     },
     {
+        subject: 'Mid Node.js at Jit.team',
+        place: 'Gdynia - remotely',
+        since: '2021.10.01',
+        until: '2021.12.31',
+        description: [
+            'Node.js Backend development',
+            'Building and implementing new solutions',
+            'Implementation of best practices and patterns',
+            'Code refactoring and optimisation',
+            'Building and implementing e2e tests, from scratch on existong code',
+            '_Technologies_: *Node.js*/Typescript, *Nest.js 7*, TypeORM, *Postgresql*',
+            'Individual working time: *fulltime*, team: *2* people'
+        ]
+    },
+    {
+        subject: 'Mid Node.js, CX-Labs via Jit.team',
+        place: 'Vien - remotely',
+        since: '2021.06.01',
+        until: '2021.09.31',
+        description: [
+            'Node.js Backend development',
+            'Building and implementing new solutions',
+            'Implementation of best practices and patterns',
+            'Code refactoring and optimisation',
+            'Building and implementing e2e tests, from scratch on existong code',
+            'Consulting and advising on new solutions and architecture for extension of an existing project',
+            '_Technologies_: *Node.js*/Typescript, *Postgresql*',
+            'Individual working time: *fulltime*, team: *2* people'
+        ]
+    },
+    {
+        //summary
         subject: 'Mid Node.js (summary) at Clearcode.cc',
-        place: 'Wrocław - stationary/remote',
+        place: 'Wrocław - stationary/remotely',
         since: '2019.01.01',
         until: '2021.03.31',
         summary: true,
@@ -116,7 +157,7 @@ const nodejs = [
     },
     {
         subject: 'Node.js Project at clearcode.cc',
-        place: 'Wrocław - stationary/remote',
+        place: 'Wrocław - stationary/remotely',
         since: '2020.03.01',
         until: '2021.01.31',
         description: [
@@ -141,10 +182,10 @@ const nodejs = [
     },
 ];
 
-const php = [
+const php: Events = [
     {
         subject: 'Senior PHP Developer (summary) at clearcode.cc',
-        place: 'Wrocław - stationary/remote',
+        place: 'Wrocław - stationary/remotely',
         since: '2013.07.01',
         until: '2021.03.31',
         summary: true,
@@ -287,7 +328,7 @@ const php = [
     },
 ];
 
-const wordpress = [
+const wordpress: Events = [
     {
         subject: 'Senior Wordpress Developer at clearcode.cc',
         place: 'Wrocław - stationary',
@@ -306,7 +347,7 @@ const wordpress = [
     },
 ];
 
-export const history = [
+export const history: Events = [
     ...nodejs,
     ...php,
     ...wordpress

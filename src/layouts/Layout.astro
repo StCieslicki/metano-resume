@@ -2,9 +2,12 @@
 import Footer from '@components/Footer.astro';
 import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
+import CalendlyPopupButtonEmbed from "../components/CalendlyPopupButtonEmbed.astro";
 
 import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
+
+import { settings } from "../data/settings";
 
 export interface LayoutProps {
 	title: string;
@@ -41,5 +44,6 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 				content-visibility: auto;
 			}
 		</style>
+		{ settings.calendly && <CalendlyPopupButtonEmbed /> }
 	</body>
 </html>

@@ -1,36 +1,35 @@
 ---
 import { history } from "../../../data/history";
-import {stylize, preformatDate} from "../../../utils/utils";
+import { preformatDate } from "../../../utils/utils";
+import Block from "./Block.astro";
+import List from "./List.astro";
+import ListItem from "./ListItem.astro";
 
 const url = Astro.url.toString();
-let data = [];
+let data;
 
-if (url.indexOf('-ext') < 0) {
+if (url.indexOf('extended') < 0) {
     data = history.filter((item) => item.summary);
 } else {
     data = history;
 }
 ---
-<div class="mb-10 pl-10">
-    <h1 class="uppercase font-bold text-xl">Employment history</h1>
-    <div class="border-t-4 mb-4 w-11"></div>
 
+<Block title="Employment history">
     { data.map((item) => (
-        <div class="mb-4">
-            <div class="flex">
-                <div class="text-base flex-col" style="width: 66%"><strong>{item.subject}</strong></div>
-                {item.place && <div class="flex-col text-xs" style="width: 33%; text-align: right;">{item.place}</div>}
-            </div>
-            <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
-            {item.description &&
-                    <ul style="list-style-type:disc;" class="ml-10 pt-2 text-xs">
+            <div class="mb-4 break-inside-avoid-page">
+                <div class="flex">
+                    <div class="text-base flex-col" style="width: 66%"><strong>{item.subject}</strong></div>
+                    {item.place && <div class="flex-col text-xs" style="width: 33%; text-align: right;">{item.place}</div>}
+                </div>
+                <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
+                {item.description &&
+                    <List>
                         {item.description.map((desc) => (
-                                <li set:html={stylize(desc)} />
+                                <ListItem subject={desc} />
                         ))}
-                    </ul>
-            }
-        </div>
+                    </List>
+                }
+            </div>
     ))}
-
-    <div class="border-b-2 border-b-gray mt-3"></div>
-</div>
+</Block>

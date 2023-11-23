@@ -1,24 +1,27 @@
 ---
-import { links } from "../../../data/liks";
-import {Icon} from "astro-icon";
+import { links } from "../../../data/links";
+import { Icon } from "astro-icon";
+import Block from "./Block.astro";
 
 const data = links
     .filter(item => item.enabled === true)
     .sort((a, b) => a.priority - b.priority)
 
 ---
-<div class="mb-20">
-<h1 class="uppercase font-bold text-xl">Links</h1>
-    <div class="border-t-4 mb-4 w-11" ></div>
 
+<Block title="Links">
     {
         data.map(item => (
                 <p class="pb-2 underline text-tiny">
-                    <a href={item.url} target="_blank" rel="noopener" aria-label={item.ariaLabel}
-                    >{item.name}</a>
-
+                    <a
+                            href={item.url}
+                            target="_blank"
+                            rel="noopener"
+                            aria-label={item.ariaLabel}
+                    >
+                        {item.name}
+                    </a>
                 </p>
         ))
     }
-
-</div>
+</Block>
