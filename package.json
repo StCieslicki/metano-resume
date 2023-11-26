@@ -24,6 +24,7 @@
 		"@astrojs/ts-plugin": "^0.4.4",
 		"astro": "^2.3.4",
 		"astro-beam": "^1.1.1",
+		"astro-hotjar": "^1.0.1",
 		"astro-icon": "^0.8.0",
 		"astro-link": "^1.2.1",
 		"astro-navbar": "^1.2.0",
