@@ -2,6 +2,7 @@
 import Button from '@components/ui/Button.astro';
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+import { DarkMode } from 'accessible-astro-components'
 
 import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
 import { languages } from "../i18n/ui";
@@ -80,6 +81,7 @@ const menuitems = [
 					</>
 				}
 				<li><ToggleTheme /></li>
+				<!--<li><DarkMode /></li>-->
 			</ul>
 		</MenuItems>
 	</Astronav>

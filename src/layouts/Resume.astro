@@ -4,6 +4,8 @@ import { SEO } from 'astro-seo';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 // import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min.js?url";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
 
 import { header } from '../data/data'
 
@@ -30,7 +32,10 @@ const { title = header.title } = Astro.props as LayoutProps;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-		<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+		<!--<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">-->
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap">
+		</GoogleFontsOptimizer>
+
 	</head>
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"

@@ -10,3 +10,6 @@ console.log('Hi');
 
 generatePDF({ url: 'http://localhost:3000/extended/resume' });
 generatePDF({ url: 'http://localhost:3000/resume' });
+// todo fix this
+// generatePDF({ url: 'https://resume.metano.pl/extended/resume' });
+// generatePDF({ url: 'https://resume.metano.pl/resume' });

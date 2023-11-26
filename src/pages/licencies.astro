@@ -1,0 +1,19 @@
+---
+import Layout from '@layouts/Layout.astro';
+import { LicensesReport } from 'astro-licenses-report';
+
+//todo fixme
+---
+
+<Layout>
+    <main>
+        <LicensesReport
+                useDevDependencies={true}
+                depth={2}
+                nameText={'Nom'}
+                authorText={'Auteur'}
+                licenseText={'License'}
+                linkText={'URL'}
+        />
+    </main>
+</Layout>

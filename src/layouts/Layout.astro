@@ -4,7 +4,9 @@ import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
 import CalendlyPopupButtonEmbed from "../components/CalendlyPopupButtonEmbed.astro";
 import { BeamAnalytics } from "astro-beam";
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import { Hotjar } from 'astro-hotjar';
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
 import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
@@ -33,11 +35,14 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
 		<!--<title>{title}</title>-->
+
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap">
+		</GoogleFontsOptimizer>
 	</head>
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	>
-		<Navbar />
+	<Navbar />
 		<slot />
 		<Footer />
 		<style is:global>
