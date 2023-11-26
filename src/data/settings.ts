@@ -1,4 +1,4 @@
-const openToWork = false;
+const openToWork = true;
 
 export const settings = {
     openToWork,

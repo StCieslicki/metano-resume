@@ -14,7 +14,7 @@ import List from "./List.astro";
                                 <li class="pb-1" >
                                     <span class="text-base">{item.name}</span>
 
-                                    <ul style="list-style-type:disc;" class="ml-10 pt-2">
+                                    <ul style="list-style-type:disc;" class="pt-2">
                                         {
                                             item.content.map((item2) => (
                                                     <>
@@ -29,7 +29,7 @@ import List from "./List.astro";
 
                                                             {Array.isArray(item2.description) &&
                                                                     <>
-                                                                        <ul style="list-style-type:disc;" class="ml-10 pt-2">
+                                                                        <ul style="list-style-type:disc;" class="pt-2">
                                                                             {item2.description.map((item3) => (
                                                                                     <li set:html={stylize(item3)} />
                                                                             ))}

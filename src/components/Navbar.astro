@@ -8,6 +8,7 @@ import { languages } from "../i18n/ui";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 const translatedPath = useTranslatedPath(lang);
 const languagesList = Object.keys(languages);
 
@@ -19,6 +20,10 @@ const menuitems = [
 	{
 		title: t('nav.projects'),
 		path: '#projects',
+	},
+	{
+		title: t('nav.skills'),
+		path: '#skills',
 	},
 	{
 		title: t('nav.contact'),

@@ -48,7 +48,7 @@ const nodejs: Events = [
             // ' building and managing development company.',
             // '_Achievements_:',
             '_Individual working time_: *fulltime*, team: *5* people'
-        ]
+        ],
     },
     {
         //summary
@@ -184,10 +184,10 @@ const nodejs: Events = [
 
 const php: Events = [
     {
-        subject: 'Senior PHP Developer (summary) at clearcode.cc',
+        subject: 'Senior PHP Developer (summary) at Clearcode.cc',
         place: 'Wrocław - stationary/remotely',
         since: '2013.07.01',
-        until: '2021.03.31',
+        until: '2019.10.30',
         summary: true,
         description: [
             'Ability to work independently as well as in a team environment.',

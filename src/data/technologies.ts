@@ -7,15 +7,30 @@ export const technologies: EventBase[] = [
     },
     {
         subject: '_Secure passwords_',
-        description: ' *random*, *unique* per service/account, long *min 16 characters* (also in private life), dverse characters, upper/lower case letters, numers, special characters, *2fa*'
+        description: [
+            '*random*',
+            '*unique* per service/account',
+            'long *min 16 characters* (also in private life)',
+            'diverse characters',
+            'upper/lower case letters',
+            'numbers',
+            'special characters',
+            '*2fa*'
+        ].join(', ')
     },
     {
         subject: '_Password managers_',
-        description: '*LastPass* premium, *Apple keychain*'
+        description: [
+            '*LastPass* premium',
+            '*Apple keychain*'
+        ].join(', ')
     },
     {
         subject: '_Regular backups_',
-        description: '*TimeMachine*, *Rsync*'
+        description: [
+            '*TimeMachine*',
+            ' *Rsync*'
+        ].join(', ')
     },
     {
         subject: '_Drive_',
@@ -23,58 +38,129 @@ export const technologies: EventBase[] = [
     },
     {
         subject: '_Project management_',
-        description: '*Jira* (RAPS, jit.team, cc) - practice, *Trello*, *Asana*, *Redmine* - very long time ago :)'
+        description: [
+            '*Jira* (RAPS, jit.team, cc) - practice',
+            '*Trello*',
+            '*Asana*',
+            '*Redmine* - very long time ago :)'
+        ].join(', ')
     },
     {
         subject: '_Programming languages/frameworks (package manager)_',
-        description: '*Node.js/Typescript* (npm, yarn, pnpm), *nestjs*, *express*, *TypeORM*, *Vanilla JS* :), Node-RED, *PHP* (composer), *Symfony*, *WordPress*, *WPcli*'
+        description: [
+            '*Node.js/Typescript* (npm, yarn, pnpm)',
+            '*nestjs*',
+            '*express*',
+            '*TypeORM*',
+            '*Vanilla JS* :)',
+            'Node-RED',
+            '*PHP* (composer)',
+            '*Symfony*',
+            '*WordPress*',
+            '*WPcli*'
+        ].join(', ')
     },
     {
         subject: '_Databases_',
-        description: '*DynamoDB*, *Postgresql*, *MySql*, *SQLite*, *Redis*',
+        description: [
+            '*DynamoDB*',
+            '*Postgresql*',
+            '*MySql*',
+            '*SQLite*',
+            '*Redis*'
+        ].join(', ')
     },
     {
         subject: '_Code Management_',
-        description: '*GitHub* - commercial practice, *Bitbucket* - commercial practice, *GitLab* - private, hobbyist'
+        description: [
+            '*GitHub* - commercial practice',
+            '*Bitbucket* - commercial practice',
+            '*GitLab* - private, hobbyist'
+        ].join(', ')
     },
     {
         subject: '_CD/CI_',
-        description: '*CircleCI*, *Bamboo*, *Github Actions*'
+        description: [
+            '*CircleCI*',
+            '*Bamboo*',
+            '*Github Actions*'
+        ].join(', ')
     },
     {
         subject: '_IDE editors_',
-        description: '*InteliJ*, *PhpStorm/WebStorm*, *Visual Code Studio*, *BBedit*',
+        description: [
+            '*InteliJ*',
+            '*PhpStorm/WebStorm*',
+            '*Visual Code Studio*',
+            '*BBedit*'
+        ].join(', ')
     },
     {
         subject: '_Code cleanliness_',
-        description: '*eslint*, *prettier*',
+        description: [
+            '*eslint*',
+            '*prettier*',
+        ].join(', ')
     },
     {
         subject: '_Log/error tracking_',
-        description: 'ELK, Sentry'
+        description: [
+            'ELK',
+            'Sentry'
+        ].join(', ')
     }, {
         subject: '_Testing_',
-        description: '*jest*, *phpunit*'
+        description: [
+            '*jest*',
+            '*phpunit*'
+        ].join(', ')
     },
     {
         subject: '_Containerization_',
-        description: '*Docker*, docker-compose, *Kubernetes*',
+        description: [
+            '*Docker*',
+            'docker-compose',
+            '*Kubernetes*'
+        ].join(', ')
     },
     {
         subject: '_Cloud_',
-        description: '*AWS* - most projects, also by cli, AWS SDK implementation, Cognito, Lambda, Api Gateway, S3, EC2, Dynamodb, Elasticache and others, Azure: one project',
+        description: [
+            '*AWS* - most projects, also by cli, AWS SDK implementation, Cognito, Lambda, Api Gateway, S3, EC2, Dynamodb, Elasticache and others',
+            'Azure: one project'
+        ].join(', ')
     },
     {
         subject: '_Chat communication_',
-        description: '*Teams* - commercially, *Slack* - commercially in-house, *Discord*, *WhatsApp*, *iMessages*, *Messenger*, *Telegram*, *Signal*'
+        description: [
+            '*Teams* - commercially',
+            '*Slack* - commercially in-house',
+            '*Discord*',
+            '*WhatsApp*',
+            '*iMessages*',
+            '*Messenger*',
+            '*Telegram*',
+            '*Signal*'
+        ].join(', ')
     },
     {
         subject: '_Video communication_',
-        description: '*Teams*, *Google Meets* - commercially, *Google Hangout*, *Zoom*, *Skype*, *WhatsApp*'
+        description: [
+            '*Teams*',
+            '*Google Meets* - commercially',
+            '*Google Hangout*',
+            '*Zoom*,' +
+            '*Skype*',
+            '*WhatsApp*'
+        ].join(', ')
     },
     {
         subject: '_Group work_',
-        description: '*Mural*, *Miro*, *Storyboards*'
+        description: [
+            '*Mural*',
+            '*Miro*',
+            '*Storyboards*'
+        ].join()
     },
     {
         subject: '_Knowledge management_',

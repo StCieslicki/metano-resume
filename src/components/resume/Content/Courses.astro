@@ -7,8 +7,13 @@ import Block from "./Block.astro";
 <Block title="Courses">
     {
         courses.map((item) => (
-                <div>{item.subject}</div>
-                <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
+                <div class="flex mb-3">
+                    <div class="text-base flex-col" style="width: 90%"><strong>{item.subject}</strong></div>
+                    {item.place && <div class="flex-col text-xs" style="width: 10%; text-align: right;">{item.place}</div>}
+                </div>
+                <div>
+                    <div class="text-tiny"><span>{preformatDate(item.since)} — {preformatDate(item.until)}</span></div>
+                </div>
         ))
     }
 </Block>

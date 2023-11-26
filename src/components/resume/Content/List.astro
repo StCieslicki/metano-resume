@@ -3,11 +3,11 @@ const { noBullet } = Astro.props;
 ---
 
 <div class="text-xs">
-    {noBullet && <ul>
+    {noBullet && <ul class="pl-0">
         <slot />
     </ul>}
 
-    {!noBullet && <ul style="list-style-type:disc;" class="ml-10">
+    {!noBullet && <ul style="list-style-type:disc;">
         <slot />
     </ul>}
 </div>

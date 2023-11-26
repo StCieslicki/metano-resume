@@ -79,6 +79,7 @@ export const education:Events = [
 export const courses: Events = [
     {
         subject: 'Attacking and Protecting Web Applications, Niebezpiecznik.pl',
+        place: 'Wrocław',
         since: '2019.05.19',
         until: '2019.05.20',
     }
