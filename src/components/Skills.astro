@@ -1,12 +1,15 @@
 ---
+import {skills} from "../data/skills";
 import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
 import photo from '@assets/images/fotka.png';
 import { Image } from '@astrojs/image/components';
 import logoImage from "../assets/images/logo.jpg";
+import {Icon} from "astro-icon";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
+const data = skills.sort((b, a) => b.priority - a.priority)
 ---
 <style is:global>
 	div.description {
@@ -30,23 +33,16 @@ const t = useTranslations(lang);
 	</div>
 
 	<div class="w-full text-justify text-black dark:text-white lg:w-1/2">
-		<div class="mb-2">
-			<Image
-				class="rounded-full"
-				src={photo}
-				alt="Staszek Cieślicki"
-				width={512}
-				height={512}
-			/>
-
-			<!--<div class="description" set:html={`${t('about.content')}`} />-->
-			<div class="description">
-				{
-					t('about.content').map((paragraph) => (
-						<p class="pb-2" set:html={paragraph} />
-					))
-				}
-			</div>
+		<div class="mb-2 flex flex-wrap gap-3 items-stretch">
+			{skills.map(item => (
+				<div class="">
+				<Icon
+					class="h-8 hover:text-orange dark:hover:text-orange md:h-12 text-black dark:text-white"
+					name={item.icon}
+					title={`${item.name} - ${item.priority}`}
+				/>
+				</div>
+			))}
 		</div>
 	</div>
 </section>

@@ -10,7 +10,9 @@ import Bar from "./Bar.astro";
 // const data = skills.sort((a, b) => b.since - a.since)
 
 // sort by priority
-const data = skills.sort((b, a) => b.priority - a.priority)
+const data = skills
+    .filter(item => item.enabled ? item.enabled : false)
+    .sort((b, a) => b.priority - a.priority)
 
 ---
 

@@ -4,7 +4,7 @@ function bold(text: string): string {
 
     return text.replace(bold, '<strong>$1</strong>');
 
-    return html;
+    // return html;
 }
 
 function italic(text: string): string {
