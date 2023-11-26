@@ -60,7 +60,7 @@ export const links: Links = [
         priority: 60,
         since: 2015,
         // url: 'https://www.youtube.com/channel/UCBScXHGVH41ITor6itH5tOw',
-        url: 'http://youtube.com/stahoos',
+        url: 'https://youtube.com/stahoos',
         ariaLabel: 'youtube',
         icon: 'simple-icons:youtube'
     },

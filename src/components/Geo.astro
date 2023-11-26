@@ -1,0 +1,29 @@
+---
+import { GeoMap } from 'astro-geo-map';
+import { geo } from "../data/data";
+---
+
+<div class="m-auto" style=`text-align: center; margin:auto; width: ${geo.width}`>
+    <!--<GeoMap-->
+    <!--        x={geo.lat}-->
+    <!--        y={geo.lng}-->
+    <!--        z={geo.zoom}-->
+    <!--        width={geo.width}-->
+    <!--        height={geo.height}-->
+    <!--        attribution={true}-->
+    <!--        center={[geo.lat, geo.lng]}-->
+    <!--        zoom={geo.zoom}-->
+    <!--        url="http://resume.metano.pl"-->
+    <!--        address="Wrocław"-->
+    <!--/>-->
+    <GeoMap
+            x={geo.lat}
+            y={geo.lng}
+            z={geo.zoom}
+            width={geo.width}
+            height={geo.height}
+            attribution={true}
+            center={[geo.lat, geo.lng]}
+            zoom={geo.zoom}
+    />
+</div>

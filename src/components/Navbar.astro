@@ -2,6 +2,10 @@
 import Button from '@components/ui/Button.astro';
 import ToggleTheme from '@components/ui/ToggleTheme.astro';
 import { Astronav, MenuIcon, MenuItems } from 'astro-navbar';
+// import logoImage from '@assets/images/logo-alpha.png';
+import logoImage from '@assets/images/logo.jpg';
+import { Image } from '@astrojs/image/components';
+
 import { DarkMode } from 'accessible-astro-components'
 
 import { getLangFromUrl, useTranslations, useTranslatedPath } from "../i18n/utils";
@@ -36,9 +40,16 @@ const menuitems = [
 <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
-			<Button size={'sm'} name="Download CV">
-				<a href="download/cv.pdf" target="_blank">{`${t('nav.download')}`}</a>
-			</Button>
+			<!--<Button size={'sm'} name="Download CV">-->
+			<!--	<a href="download/cv.pdf" target="_blank">{`${t('nav.download')}`}</a>-->
+			<!--</Button>-->
+			<Image
+				class="rounded-full"
+				src={logoImage}
+				alt="Metano.pl"
+				width={128}
+				height={128}
+			/>
 			<div class="block lg:hidden">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
 			</div>

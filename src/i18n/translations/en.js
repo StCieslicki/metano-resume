@@ -12,14 +12,16 @@ const nav = {
 
 const about = {
     'about.title': 'About me',
-    'about.content': `
-        Here is your description in English! Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-\t\t\tsed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-\t\t\tquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-\t\t\tirure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-\t\t\tExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-\t\t\tid est laborum
-        `,
+    'about.content': [
+        'I am a programmer with many years of experience.',
+        'I started my professional journey with:',
+        '<strong>Wordpress</strong> in 2013,',
+        'then I worked in the backend as a <strong>PHP Symfony</strong> developer from 2015,',
+        'and from 2019 I am working in:',
+        'backend as <strong>Node.js/Typescript</strong> developer',
+        'in the frontend as <strong>React</strong> developer',
+        'mainly in the <strong>AWS</strong> cloud.'
+    ]
 }
 
 const hero = {
@@ -34,6 +36,7 @@ const projects = {
 }
 
 const others = {
+    'skills.title': 'Skills',
     'contact.title': 'Say hello!',
     'calendly.button': 'Schedule time with me',
     'ribbon.name': 'Open to work',

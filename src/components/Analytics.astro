@@ -1,0 +1,8 @@
+---
+import { BeamAnalytics } from "astro-beam";
+import { Hotjar } from 'astro-hotjar';
+import { beamAnalyticsId, hotJarId } from "../data/analytics";
+---
+
+{ beamAnalyticsId && <BeamAnalytics token={beamAnalyticsId} /> }
+{ hotJarId && hotJarId.id && hotJarId.version && <Hotjar id={hotJarId.id} version={hotJarId.version} /> }

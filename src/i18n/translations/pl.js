@@ -10,10 +10,16 @@ const nav = {
 
 const about = {
     'about.title': 'O mnie',
-    'about.content': `
-Tutaj jest twoje opis po polsku! Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        `,
-
+    'about.content': [
+        'Jestem programistą z wieloletnim doświadczeniem.',
+        'Swoją profesjonalną drogę zaczynałem od:',
+        '<strong>Wordpress</strong>a w 2013 roku,',
+        'następnie od 2015 pracowałem w backendzie jako <strong>PHP Symfony</strong> deweloper',
+        'a od 2019 pracuję w:',
+        'backendzie jako <strong>Node.js/Typescript</strong> deweloper',
+        'we frontendzie jako <strong>React</strong> deweloper',
+        'głównie w chumrze <strong>AWS</strong>.'
+    ]
 }
 
 const hero = {
@@ -30,6 +36,7 @@ const projects = {
 }
 
 const others = {
+    'skills.title': 'Umiejętności',
     'contact.title': 'Napisz do mnie!',
     'calendly.button': 'Umów ze mną spotkanie',
     'ribbon.name': 'do wynajęcia',

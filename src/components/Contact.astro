@@ -3,6 +3,8 @@ import Button from '@components/ui/Button.astro';
 import Social from '@components/ui/Social.astro';
 
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { details } from "../data/data";
+import {Link} from "astro-link";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,7 +15,13 @@ const t = useTranslations(lang);
 	id="contact"
 	class="flex flex-col flex-wrap items-center justify-center gap-8 text-black dark:text-white lg:mb-0 lg:h-screen"
 >
-	<Button size={'lg'} style={'primary'} name="Contact">{`${t('contact.title')}`}</Button>
+	<!--<Button size={'lg'} style={'primary'} name="Contact">{`${t('contact.title')}`}</Button>-->
+	<Link
+		href={`mailto:${ details.email }`}
+	>{details.email}</Link>
+	<Link
+		href={`tel:${ details.phone }`}
+	>{details.phone}</Link>
 	<hr class="w-1/2" />
 	<div class="flex flex-col gap-8 lg:flex lg:flex-row lg:gap-20">
 		<Social />

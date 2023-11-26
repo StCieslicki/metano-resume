@@ -3,22 +3,20 @@ import Footer from '@components/Footer.astro';
 import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
 import CalendlyPopupButtonEmbed from "../components/CalendlyPopupButtonEmbed.astro";
-import { BeamAnalytics } from "astro-beam";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
-import { Hotjar } from 'astro-hotjar';
-import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
-
+import Geo from "../components/Geo.astro";
+import Analytics from "../components/Analytics.astro";
 import { getLangFromUrl } from "../i18n/utils";
-const lang = getLangFromUrl(Astro.url);
-
 import { settings } from "../data/settings";
-import { beamAnalyticsId, hotJarId } from "../data/analytics";
+import { header } from "../data/simpleHeader";
+
+const lang = getLangFromUrl(Astro.url);
 
 export interface LayoutProps {
 	title: string;
 }
 
-const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as LayoutProps;
+const { title = `${header.title} ${header.subtitle}` } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
@@ -27,6 +25,7 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 		<SEO
 			title={title}
 			description="A heavily optimized description full of well-researched keywords."
+
 		/>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -36,15 +35,19 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 
 		<!--<title>{title}</title>-->
 
-		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap">
-		</GoogleFontsOptimizer>
+		<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap" />
 	</head>
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	>
-	<Navbar />
+		<Navbar />
+
 		<slot />
+
+        <Geo />
+
 		<Footer />
+
 		<style is:global>
 			/* Improve Page speed */
 			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
@@ -54,7 +57,8 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 		</style>
 
 		{ settings.calendly && <CalendlyPopupButtonEmbed /> }
-		{ beamAnalyticsId && <BeamAnalytics token={beamAnalyticsId} /> }
-		{ hotJarId && hotJarId.id && hotJarId.version && <Hotjar id={hotJarId.id} version={hotJarId.version} /> }
+
+		<Analytics />
+
 	</body>
 </html>

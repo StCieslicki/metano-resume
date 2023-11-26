@@ -22,6 +22,16 @@ export const details: Details = {
     email: 'staszek@metano.pl'
 };
 
+export const geo = {
+    lat: 51.081909,
+    lng: 17.077333,
+    zoom: 12,
+
+    height: '25rem',
+    width: '50rem',
+};
+
+
 export const embeds = {
   calendly: {
       username: 'staszek-cieslicki',

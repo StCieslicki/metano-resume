@@ -1,9 +1,16 @@
 ---
-const green = '#79A70A';
-const lightGreen = '#9BC90D';
-const name = 'open to work';
+import tailwindConfig from "../../tailwind.config.js";
+import {getLangFromUrl} from "../i18n/utils";
+import {useTranslations} from "../i18n/utils";
+const color = tailwindConfig.theme.colors.orange;
+const lightColor = tailwindConfig.theme.colors.lightorange;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const name = t('ribbon.name');
 ---
-<style define:vars={{ green, lightGreen }}>
+<style define:vars={{ color, lightColor }}>
     .box {
         //width: 200px; height: 300px;
         position: relative;
@@ -29,8 +36,8 @@ const name = 'open to work';
         -webkit-transform: rotate(-45deg);
         width: 100px;
         display: block;
-        background: var(--green);
-        background: linear-gradient(var(--lightGreen) 0%, var(--green) 100%);
+        background: var(--color);
+        background: linear-gradient(var(--lightColor) 0%, var(--color) 100%);
         box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
         position: absolute;
         top: 19px; left: -21px;
@@ -39,19 +46,19 @@ const name = 'open to work';
         content: "";
         position: absolute; left: 0; top: 100%;
         z-index: -1;
-        border-left: 3px solid var(--green);
+        border-left: 3px solid var(--color);
         border-right: 3px solid transparent;
         border-bottom: 3px solid transparent;
-        border-top: 3px solid var(--green);
+        border-top: 3px solid var(--color);
     }
     .ribbon span::after {
         content: "";
         position: absolute; right: 0; top: 100%;
         z-index: -1;
         border-left: 3px solid transparent;
-        border-right: 3px solid var(--green);
+        border-right: 3px solid var(--color);
         border-bottom: 3px solid transparent;
-        border-top: 3px solid var(--green);
+        border-top: 3px solid var(--color);
     }
 </style>
 

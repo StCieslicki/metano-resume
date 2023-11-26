@@ -13,9 +13,22 @@ export default defineConfig({
   srcDir: './src',
   publicDir: './public',
   outDir: './build',
-  integrations: [tailwind(), mdx(), image(), sitemap({
-    filter: page => page.indexOf('/download/') === -1 && page.indexOf('/resume/') === -1 && page.indexOf('/cover-letter/') === -1 && page.indexOf('/extended/') === -1 && page.indexOf('/print/') === -1
-  }), robotsTxt({
+  // output: 'static',
+  output: 'hybrid',
+  integrations: [
+    tailwind(),
+    mdx(),
+    image(),
+    sitemap({
+      filter:
+            page => page.indexOf('/download/') === -1
+                && page.indexOf('/resume/') === -1
+                && page.indexOf('/cover-letter/') === -1
+                && page.indexOf('/extended/') === -1
+                && page.indexOf('/licencies/') === -1
+                && page.indexOf('/print/') === -1
+    }),
+    robotsTxt({
     // policy: [{
     // allow: '/',
     // disallow: [
@@ -26,5 +39,8 @@ export default defineConfig({
     //   '/print/*'
     // ]
     // }]
-  }), compress()]
+    }),
+    compress()
+  ],
+  // vite: { optimizeDeps: { include: ['leaflet'] } },
 });

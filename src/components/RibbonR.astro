@@ -2,15 +2,15 @@
 import tailwindConfig from "../../tailwind.config.js";
 import {getLangFromUrl} from "../i18n/utils";
 import {useTranslations} from "../i18n/utils";
-const green = tailwindConfig.theme.colors.orange;
-const lightGreen = tailwindConfig.theme.colors.lightorange;
+const color = tailwindConfig.theme.colors.orange;
+const lightColor = tailwindConfig.theme.colors.lightorange;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const name = t('ribbon.name');
 ---
-<style define:vars={{ green, lightGreen }}>
+<style define:vars={{ color, lightColor }}>
     .box {
         //width: 200px; height: 300px;
         position: relative;
@@ -26,7 +26,7 @@ const name = t('ribbon.name');
         text-align: right;
     }
     .ribbon span {
-        font-size: 10px;
+        font-size: 9px;
         font-weight: bold;
         color: #FFF;
         text-transform: uppercase;
@@ -36,8 +36,8 @@ const name = t('ribbon.name');
         -webkit-transform: rotate(45deg);
         width: 100px;
         display: block;
-        background: var(--orange);
-        background: linear-gradient(var(--lightorange) 0%, var(--orange) 100%);
+        background: var(--color);
+        background: linear-gradient(var(--lightColor) 0%, var(--color) 100%);
         box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
         position: absolute;
         top: 19px; right: -21px;
@@ -46,22 +46,24 @@ const name = t('ribbon.name');
         content: "";
         position: absolute; left: 0; top: 100%;
         z-index: -1;
-        border-left: 3px solid var(--orange);
+        border-left: 3px solid var(--color);
         border-right: 3px solid transparent;
         border-bottom: 3px solid transparent;
-        border-top: 3px solid var(--orange);
+        border-top: 3px solid var(--color);
     }
     .ribbon span::after {
         content: "";
         position: absolute; right: 0; top: 100%;
         z-index: -1;
         border-left: 3px solid transparent;
-        border-right: 3px solid var(--orange);
+        border-right: 3px solid var(--color);
         border-bottom: 3px solid transparent;
-        border-top: 3px solid var(--orange);
+        border-top: 3px solid var(--color);
     }
 </style>
 
 <div class="box">
-    <div class="ribbon"><span><a href="/resume">{name}</a></span></div>
+    <!--<div class="ribbon"><span><a href="/resume">{name}</a></span></div>-->
+    <div class="ribbon"><span>{name}</span></div>
 </div>
+
