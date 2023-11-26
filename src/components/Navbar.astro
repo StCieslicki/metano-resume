@@ -29,17 +29,15 @@ const menuitems = [
 		title: t('nav.contact'),
 		path: '#contact',
 	},
-	// {
-	// 	title: 'Abc',
-	// 	path: '#abc'
-	// }
 ];
 ---
 
 <header data-testId="header" class="my-5 flex flex-col items-center justify-between lg:flex-row">
 	<Astronav>
 		<div class="flex w-full items-center justify-between lg:w-auto">
-			<Button size={'sm'} name="Download CV"><a href="download/cv.pdf" target="_blank">{`${t('nav.download')}`}</a></Button>
+			<Button size={'sm'} name="Download CV">
+				<a href="download/cv.pdf" target="_blank">{`${t('nav.download')}`}</a>
+			</Button>
 			<div class="block lg:hidden">
 				<MenuIcon class="h-4 w-4 text-black dark:text-white" />
 			</div>

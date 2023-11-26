@@ -2,6 +2,8 @@
 import { links } from "../../../data/links";
 import { Icon } from "astro-icon";
 import Block from "./Block.astro";
+import { Link } from 'astro-link';
+
 
 const data = links
     .filter(item => item.enabled === true)
@@ -12,15 +14,15 @@ const data = links
 <Block title="Links">
     {
         data.map(item => (
-                <p class="pb-2 underline text-tiny">
-                    <a
+                <p class="text-tiny">
+                    <Link
                             href={item.url}
-                            target="_blank"
-                            rel="noopener"
-                            aria-label={item.ariaLabel}
+                            title={item.name}
+                            externalInNewTab={true}
+                            class="text-black"
                     >
                         {item.name}
-                    </a>
+                    </Link>
                 </p>
         ))
     }
