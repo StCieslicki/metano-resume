@@ -4,11 +4,13 @@ import Navbar from '@components/Navbar.astro';
 import { SEO } from 'astro-seo';
 import CalendlyPopupButtonEmbed from "../components/CalendlyPopupButtonEmbed.astro";
 import { BeamAnalytics } from "astro-beam";
+import { Hotjar } from 'astro-hotjar';
 
 import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 
 import { settings } from "../data/settings";
+import { beamAnalyticsId, hotJarId } from "../data/analytics";
 
 export interface LayoutProps {
 	title: string;
@@ -35,8 +37,6 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 	<body
 		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px]"
 	>
-		<BeamAnalytics token="671de2ac-e1e2-481d-aa56-e8f73ef2d4f6" />
-
 		<Navbar />
 		<slot />
 		<Footer />
@@ -47,6 +47,9 @@ const { title = 'Staszek Cieślicki | Fullstack developer' } = Astro.props as La
 				content-visibility: auto;
 			}
 		</style>
+
 		{ settings.calendly && <CalendlyPopupButtonEmbed /> }
+		{ beamAnalyticsId && <BeamAnalytics token={beamAnalyticsId} /> }
+		{ hotJarId && hotJarId.id && hotJarId.version && <Hotjar id={hotJarId.id} version={hotJarId.version} /> }
 	</body>
 </html>
