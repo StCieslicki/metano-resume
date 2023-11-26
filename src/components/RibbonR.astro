@@ -1,0 +1,67 @@
+---
+import tailwindConfig from "../../tailwind.config.js";
+import {getLangFromUrl} from "../i18n/utils";
+import {useTranslations} from "../i18n/utils";
+const green = tailwindConfig.theme.colors.orange;
+const lightGreen = tailwindConfig.theme.colors.lightorange;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const name = t('ribbon.name');
+---
+<style define:vars={{ green, lightGreen }}>
+    .box {
+        //width: 200px; height: 300px;
+        position: relative;
+        //border: 1px solid #BBB;
+        //background: #EEE;
+    }
+    .ribbon {
+        position: absolute;
+        right: -5px; top: -5px;
+        z-index: 1;
+        overflow: hidden;
+        width: 75px; height: 75px;
+        text-align: right;
+    }
+    .ribbon span {
+        font-size: 10px;
+        font-weight: bold;
+        color: #FFF;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 20px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        width: 100px;
+        display: block;
+        background: var(--green);
+        background: linear-gradient(var(--lightGreen) 0%, var(--green) 100%);
+        box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+        position: absolute;
+        top: 19px; right: -21px;
+    }
+    .ribbon span::before {
+        content: "";
+        position: absolute; left: 0; top: 100%;
+        z-index: -1;
+        border-left: 3px solid var(--green);
+        border-right: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid var(--green);
+    }
+    .ribbon span::after {
+        content: "";
+        position: absolute; right: 0; top: 100%;
+        z-index: -1;
+        border-left: 3px solid transparent;
+        border-right: 3px solid var(--green);
+        border-bottom: 3px solid transparent;
+        border-top: 3px solid var(--green);
+    }
+</style>
+
+<div class="box">
+    <div class="ribbon"><span><a href="/resume">{name}</a></span></div>
+</div>
