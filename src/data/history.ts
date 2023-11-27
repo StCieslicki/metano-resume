@@ -208,7 +208,7 @@ const php: Events = [
             'Postgresql, ' +
             'Angular (new frontend), ' +
 
-            'AWS' +
+            'AWS, ' +
             'Azure, ' +
 
             'Video, ' +

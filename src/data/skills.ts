@@ -3,13 +3,15 @@ import { SkillBase } from "./types";
 type Skills = (SkillBase & {
     type: string,
     icon?: string,
-    enabled?: boolean,
+    disabled?: boolean,
+    important?: boolean,
+    copyright?: string
 })[];
 
 const backend = [
     {
         name: 'Node.js',
-        enabled: true,
+        important: true,
         weight: 80,
         priority: 100,
         since: 2018,
@@ -20,39 +22,41 @@ const backend = [
 
 const languages = [
     {
-        name: 'javascript',
+        name: 'Javascript',
         weight: 40,
         priority: 120,
         since: 2017,//?
         type: 'js', //?
-        icon: 'simple-icons:javascript'
+        icon: 'simple-icons:javascript',
+        copyright: 'mit'
     },
     {
         name: 'TypeScript',
-        enabled: true,
+        important: true,
         weight: 60,
         priority: 200,
         since: 2019,
         type: 'backend',
         icon: 'simple-icons:typescript',
+        copyright: 'https://www.typescriptlang.org/branding/'
 
     },
     {
         name: 'PHP',
-        enabled: true,
+        important: true,
         weight: 70,
         priority: 800,
         since: 2015,
         type: 'backend',
         icon: 'simple-icons:php',
-
+        copyright: 'CC-BY-SA-4.0'
     },
 ]
 
 const frontend = [
     {
         name: 'React',
-        enabled: true,
+        important: true,
         weight: 40,
         priority: 300,
         since: 2020,
@@ -61,7 +65,7 @@ const frontend = [
     },
     {
         name: 'HTML',
-        enabled: true,
+        important: true,
         weight: 100,
         priority: 1000,
         since: 2013,
@@ -70,7 +74,7 @@ const frontend = [
     },
     {
         name: 'CSS',
-        enabled: true,
+        important: true,
         weight: 100,
         priority: 1010,
         since: 2013,
@@ -83,28 +87,31 @@ const frontend = [
 const vcs = [
     {
         name: 'Git',
-        enabled: true,
+        important: true,
         weight: 95,
         priority: 400,
         since: 2015,
         type: 'vcs',
         icon: 'simple-icons:git',
+        copyright: 'CC-BY-3.0'
     },
     {
-        name: 'github',
+        name: 'Github',
         weight: 40,
         priority: 410, //?
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:github'
+        icon: 'simple-icons:github',
+        copyright: 'https://github.com/logos',
     },
     {
-        name: 'gitlab',
+        name: 'Gitlab',
         weight: 40,
         priority: 420, //?
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:gitlab'
+        icon: 'simple-icons:gitlab',
+        copyrigth: 'https://handbook.gitlab.com/handbook/marketing/brand-and-product-marketing/brand/brand-activation/trademark-guidelines/'
     },
     {
         name: 'Bitbucket',
@@ -112,14 +119,15 @@ const vcs = [
         priority: 430, //?
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:bitbucket'
+        icon: 'simple-icons:bitbucket',
+        copyrigth: 'https://atlassian.design/foundations/logos'
     },
 ]
 
 const containers = [
     {
         name: 'Docker',
-        enabled: true,
+        important: true,
         weight: 80,
         priority: 500,
         since: 2017,
@@ -130,46 +138,50 @@ const containers = [
 const rdbs = [
     {
         name: 'SQL',
-        enabled: true,
+        important: true,
         weight: 80,
         priority: 600,
         since: 2013,
         type: 'database',
     },
     {
-        name: 'influxdb',
+        name: 'Influxdb',
         weight: 40,
         priority: 650,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:influxdb'
+        icon: 'simple-icons:influxdb',
+        copyrigth: 'https://www.influxdata.com/brand-guidelines/'
     },
     {
-        name: 'postgresql',
+        name: 'Postgresql',
         weight: 40,
         priority: 610,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:postgresql'
+        icon: 'simple-icons:postgresql',
+        copyrigth: 'https://www.postgresql.org/about/policies/trademarks/'
     },
     {
-        name: 'mysql',
+        name: 'Mysql',
         weight: 40,
         priority: 620,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:mysql'
+        icon: 'simple-icons:mysql',
+        copyrigth: 'https://www.mysql.com/about/legal/logos.html'
     },
     {
-        name: 'mariadb',
+        name: 'Mariadb',
         weight: 40,
         priority: 630,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:mariadb'
+        icon: 'simple-icons:mariadb',
+        copyrigth: 'https://mariadb.com/about-us/logos/'
     },
     {
-        name: 'sqlite',
+        name: 'Sqlite',
         weight: 40,
         priority: 640,
         since: 2017,//?
@@ -181,36 +193,46 @@ const rdbs = [
 const os = [
     {
         name: 'Linux',
-        enabled: true,
+        important: true,
         weight: 80,
         priority: 700,
         since: 2013,
         type: 'os',
         icon: 'simple-icons:linux',
     },
+    {
+        name: 'Macos',
+        important: true,
+        weight: 80,
+        priority: 700,
+        since: 1998,
+        type: 'os',
+        icon: 'simple-icons:macos',
+    },
 ]
 
 const management = [
     {
         name: 'JIRA',
-        enabled: true,
+        important: true,
         weight: 80,
         priority: 900,
         since: 2015,
         type: 'management',
         icon: 'simple-icons:jira',
+        copyrigth: 'https://atlassian.design/foundations/logos'
     },
 ]
 
 const cloud = [
     {
         name: 'AWS',
-        enabled: true,
+        important: true,
         weight: 30,
         priority: 1200,
         since: 2017,
         type: 'cloud',
-        icon: 'simple-icons:amazonaws',
+        icon: 'simple-icons:amazonaws', //?
     },
     {
         name: 'AWS dynamoDB',
@@ -218,7 +240,8 @@ const cloud = [
         priority: 1200,
         since: 2017, //?
         type: 'cloud',
-        icon: 'simple-icons:amazondynamodb'
+        icon: 'simple-icons:amazondynamodb',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
         name: 'AWS EC2',
@@ -227,7 +250,8 @@ const cloud = [
         since: 2017, //?
         type: 'cloud',
         // icon: 'simple-icons:amazonec2'
-        icon: 'amazonec2'
+        icon: 'amazonec2',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
         name: 'AWS RDS',
@@ -236,7 +260,8 @@ const cloud = [
         since: 2017, //?
         type: 'cloud',
         // icon: 'simple-icons:amazonrds'
-        icon: 'amazonrds'
+        icon: 'amazonrds',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
         name: 'AWS S3',
@@ -244,7 +269,8 @@ const cloud = [
         priority: 1200,
         since: 2017, //?
         type: 'cloud',
-        icon: 'simple-icons:amazons3'
+        icon: 'simple-icons:amazons3',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
         name: 'AWS Lambda',
@@ -253,7 +279,8 @@ const cloud = [
         since: 2017, //?
         type: 'cloud',
         // icon: 'simple-icons:awslambda'
-        icon: 'awslambda'
+        icon: 'awslambda',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
         name: 'AWS SQS',
@@ -262,10 +289,21 @@ const cloud = [
         since: 2017, //?
         type: 'cloud',
         // icon: 'simple-icons:amazonsqs'
-        icon: 'amazonsqs'
+        icon: 'amazonsqs',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
     },
     {
-        name: 'kubernetes',
+        name: 'amazonapigateway',
+        weight: 30,
+        priority: 1200,
+        since: 2017, //?
+        type: 'cloud',
+        // icon: 'simple-icons:amazonapigateway',
+        icon: 'amazonapigateway',
+        copyrigth: 'https://aws.amazon.com/architecture/icons/'
+    },
+    {
+        name: 'Kubernetes',
         weight: 40,
         priority: 510, //?
         since: 2017,//?
@@ -277,7 +315,7 @@ const cloud = [
 const testing = [
     {
         name: 'Jest',
-        enabled: true,
+        important: true,
         weight: 40,
         priority: 1300,
         since: 2020,
@@ -286,19 +324,18 @@ const testing = [
     },
     {
         // ????
-        name: 'playwright',
-        enabled: true,
+        name: 'Playwright',
         weight: 40,
         priority: 1300,
         since: 2020,
         type: 'testing',
         // icon: 'simple-icons:playwright'
-        icon: 'playwright'
+        icon: 'playwright',
+        disabled: true
     },
     {
         // ????
-        name: 'dotenv',
-        enabled: true,
+        name: 'Dotenv',
         weight: 40,
         priority: 1300,
         since: 2020,
@@ -308,36 +345,49 @@ const testing = [
     },
     {
         // ????
-        name: 'gnubash',
-        enabled: true,
+        name: 'Openvpn',
+        weight: 40,
+        priority: 9000,
+        since: 2020,
+        type: 'testing',
+        icon: 'simple-icons:openvpn',
+        copyrigth: 'https://openvpn.net/legal/'
+    },
+    {
+        // ????
+        name: 'Gnubash',
         weight: 40,
         priority: 1300,
         since: 2020,
         type: 'testing',
-        icon: 'simple-icons:gnubash'
+        icon: 'simple-icons:gnubash',
+        copyrigth: 'mit'
         // icon: 'dotenv'
     },
 ]
 
 const packageManagers = [
     {
-        name: 'npm',
+        name: 'Npm',
         weight: 40,
         priority: 110,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:npm'
+        icon: 'simple-icons:npm',
+        copyrigth: 'https://docs.npmjs.com/policies/logos-and-usage'
     },
     {
-        name: 'yarn',
+        name: 'Yarn',
         weight: 40,
         priority: 9000,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:yarn'
+        icon: 'simple-icons:yarn',
+        copyrigth: 'CC-BY-4.0'
+
     },
     {
-        name: 'pnpm',
+        name: 'Pnpm',
         weight: 40,
         priority: 9000,
         since: 2017,//?
@@ -352,27 +402,37 @@ const packageManagers = [
         type: 'php', //?
         icon: 'simple-icons:composer'
     },
+    {
+        name: 'Sentry',
+        weight: 40,
+        priority: 810,
+        since: 2017,//?
+        type: 'php', //?
+        icon: 'simple-icons:sentry'
+    },
 ]
 
 const videos = [
     {
-        name: 'zoom',
+        name: 'Zoom',
         weight: 40,
         priority: 1400,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:zoom'
+        icon: 'simple-icons:zoom',
+        copyrigth: 'https://brand.zoom.us'
     },
     {
-        name: 'microsoftteams',
+        name: 'Microsoftteams',
         weight: 40,
         priority: 1400,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:microsoftteams'
+        icon: 'simple-icons:microsoftteams',
+        copyrigth: 'https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks'
     },
     {
-        name: 'googlemeet',
+        name: 'Google Meet',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -380,7 +440,7 @@ const videos = [
         icon: 'simple-icons:googlemeet'
     },
     {
-        name: 'googlehangouts',
+        name: 'Google Hangouts',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -388,23 +448,35 @@ const videos = [
         icon: 'simple-icons:googlehangouts'
     },
     {
-        name: 'slack',
+        name: 'Google Fonts',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        icon: 'simple-icons:googlefonts'
+    },
+    {
+        name: 'Slack',
         weight: 40,
         priority: 1400,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:slack'
+        icon: 'simple-icons:slack',
+        copyrigth: 'https://slack.com/media-kit'
     },
     {
-        name: 'discord',
+        name: 'Discord',
         weight: 40,
         priority: 1400,
         since: 2017,//?
         type: 'php', //?
-        icon: 'simple-icons:discord'
+        icon: 'simple-icons:discord',
+        copyrigth: 'https://discord.com/branding'
+
+        //// nie prawdzałem tych poniżej...
     },
     {
-        name: 'skype',
+        name: 'Skype',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -412,7 +484,7 @@ const videos = [
         icon: 'simple-icons:skype'
     },
     {
-        name: 'whatsapp',
+        name: 'WhatsApp',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -420,7 +492,7 @@ const videos = [
         icon: 'simple-icons:whatsapp'
     },
     {
-        name: 'telegram',
+        name: 'Telegram',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -428,7 +500,7 @@ const videos = [
         icon: 'simple-icons:telegram'
     },
     {
-        name: 'signal',
+        name: 'Signal',
         weight: 40,
         priority: 1400,
         since: 2017,//?
@@ -455,7 +527,7 @@ const frameworks = [
         icon: 'simple-icons:express'
     },
     {
-        name: 'fastify',
+        name: 'Fastify',
         weight: 40,
         priority: 1500,
         since: 2017,//?
@@ -463,7 +535,7 @@ const frameworks = [
         icon: 'simple-icons:fastify'
     },
     {
-        name: 'symfony',
+        name: 'Symfony',
         weight: 40,
         priority: 820,
         since: 2017,//?
@@ -474,7 +546,7 @@ const frameworks = [
 
 const cms = [
     {
-        name: 'wordpress',
+        name: 'Wordpress',
         weight: 40,
         priority: 1600,
         since: 2017,//?
@@ -485,7 +557,7 @@ const cms = [
 
 const ide = [
     {
-        name: 'webstorm',
+        name: 'Webstorm',
         weight: 40,
         priority: 1720,
         since: 2017,//?
@@ -493,7 +565,7 @@ const ide = [
         icon: 'simple-icons:webstorm'
     },
     {
-        name: 'phpstorm',
+        name: 'Phpstorm',
         weight: 40,
         priority: 1710,
         since: 2017,//?
@@ -501,7 +573,7 @@ const ide = [
         icon: 'simple-icons:phpstorm'
     },
     {
-        name: 'intellijidea',
+        name: 'IntelliJ',
         weight: 40,
         priority: 1700,
         since: 2017,//?
@@ -509,7 +581,7 @@ const ide = [
         icon: 'simple-icons:intellijidea'
     },
     {
-        name: 'visualstudiocode',
+        name: 'VisualStudio Code',
         weight: 40,
         priority: 1730,
         since: 2017,//?
@@ -529,7 +601,7 @@ const render = [
         icon: 'render'
     },
     {
-        name: 'netlify',
+        name: 'Netlify',
         weight: 40,
         priority: 1800,
         since: 2017,//?
@@ -540,7 +612,7 @@ const render = [
 
 const hw = [
     {
-        name: 'raspberrypi',
+        name: 'RaspberryPi',
         weight: 40,
         priority: 710,
         since: 2017,//?
@@ -551,7 +623,7 @@ const hw = [
 
 const passwordManagers = [
     {
-        name: 'lastpass',
+        name: 'LastPass',
         weight: 40,
         priority: 1900,
         since: 2017,//?
@@ -562,7 +634,7 @@ const passwordManagers = [
 
 const groupWork = [
     {
-        name: 'mural',
+        name: 'Mural',
         weight: 40,
         priority: 2000,
         since: 2017,//?
@@ -571,7 +643,7 @@ const groupWork = [
         icon: 'mural'
     },
     {
-        name: 'miro',
+        name: 'Miro',
         weight: 40,
         priority: 2100,
         since: 2017,//?
@@ -588,7 +660,7 @@ const builders = [
         since: 2023,
         type: 'frontend',
         icon: 'simple-icons:astro',
-        enabled: true
+        important: true
     },
 ]
 
@@ -620,8 +692,8 @@ export const skills: Skills = [
         priority: 9000,
         since: 2017,
         type: 'api',
-        icon: 'simple-icons:rest',
-        enabled: true
+        // icon: 'simple-icons:rest',
+        important: true
     },
 
     {
@@ -641,6 +713,30 @@ export const skills: Skills = [
         icon: 'simple-icons:asana'
     },
     {
+        name: 'Trello',
+        weight: 40,
+        priority: 930,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'simple-icons:trello'
+    },
+    {
+        name: 'Redmine',
+        weight: 40,
+        priority: 930,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'simple-icons:redmine'
+    },
+    {
+        name: 'Terminal',
+        weight: 40,
+        priority: 930,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'gnometerminal'
+    },
+    {
         name: 'Atlassian',
         weight: 40,
         priority: 920,
@@ -655,6 +751,22 @@ export const skills: Skills = [
         since: 2017,//?
         type: 'api', //?
         icon: 'simple-icons:auth0'
+    },
+    {
+        name: 'NodeRed',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'simple-icons:nodered'
+    },
+    {
+        name: 'Nodemon',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'simple-icons:nodemon'
     },
     {
         name: 'Authy',
@@ -697,12 +809,20 @@ export const skills: Skills = [
         icon: 'simple-icons:circleci'
     },
     {
-        name: 'bamboo',
+        name: 'Bamboo',
         weight: 40,
         priority: 2300,
         since: 2017,//?
         type: 'api', //?
         icon: 'simple-icons:bamboo'
+    },
+    {
+        name: 'Github Actions',
+        weight: 40,
+        priority: 2300,
+        since: 2017,//?
+        type: 'api', //?
+        icon: 'simple-icons:githubactions'
     },
     {
         name: 'Confluence',
@@ -722,7 +842,15 @@ export const skills: Skills = [
         icon: 'simple-icons:eslint'
     },
     {
-        name: 'figma',
+        name: 'Prettier',
+        weight: 40,
+        priority: 2400,
+        since: 2017,//?
+        type: 'php', //?
+        icon: 'simple-icons:prettier'
+    },
+    {
+        name: 'Figma',
         weight: 40,
         priority: 2500,
         since: 2017,//?
@@ -730,7 +858,7 @@ export const skills: Skills = [
         icon: 'simple-icons:figma'
     },
     {
-        name: 'grafana',
+        name: 'Grafana',
         weight: 40,
         priority: 2600,
         since: 2017,//?
@@ -738,7 +866,7 @@ export const skills: Skills = [
         icon: 'simple-icons:grafana'
     },
     {
-        name: 'graphql',
+        name: 'GraphQl',
         weight: 40,
         priority: 710,
         since: 2017,//?
@@ -746,7 +874,7 @@ export const skills: Skills = [
         icon: 'simple-icons:graphql'
     },
     {
-        name: 'homeassistant',
+        name: 'HomeAssistant',
         weight: 40,
         priority: 2700,
         since: 2017,//?
@@ -755,7 +883,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'json',
+        name: 'Json',
         weight: 40,
         priority: 2800,
         since: 2017,//?
@@ -763,7 +891,7 @@ export const skills: Skills = [
         icon: 'simple-icons:json'
     },
     {
-        name: 'jsonwebtokens',
+        name: 'Json WebTokens',
         weight: 40,
         priority: 2900,
         since: 2017,//?
@@ -772,7 +900,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'less',
+        name: 'Less',
         weight: 40,
         priority: 1020,
         since: 2017,//?
@@ -789,7 +917,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'lodash',
+        name: 'Lodash',
         weight: 40,
         priority: 3000,
         since: 2017,//?
@@ -798,7 +926,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'markdown',
+        name: 'Markdown',
         weight: 40,
         priority: 3100,
         since: 2017,//?
@@ -807,7 +935,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'mqtt',
+        name: 'Mqtt',
         weight: 40,
         priority: 3200,
         since: 2017,//?
@@ -816,7 +944,7 @@ export const skills: Skills = [
         icon: 'mqtt'
     },
     {
-        name: 'phpmyadmin',
+        name: 'PhpMyAdmin',
         weight: 40,
         priority: 3300,
         since: 2017,//?
@@ -826,7 +954,7 @@ export const skills: Skills = [
 
 
     {
-        name: 'postman',
+        name: 'Postman',
         weight: 40,
         priority: 3400,
         since: 2017,//?
@@ -842,7 +970,7 @@ export const skills: Skills = [
         icon: 'simple-icons:insomnia'
     },
     {
-        name: 'redux',
+        name: 'Redux',
         weight: 40,
         priority: 310,
         since: 2017,//?
@@ -850,7 +978,7 @@ export const skills: Skills = [
         icon: 'simple-icons:redux'
     },
     {
-        name: 'redis',
+        name: 'Redis',
         weight: 40,
         priority: 3500,
         since: 2017,//?
@@ -858,7 +986,7 @@ export const skills: Skills = [
         icon: 'simple-icons:redis'
     },
     {
-        name: 'serverless',
+        name: 'Serverless',
         weight: 40,
         priority: 3600,
         since: 2017,//?
@@ -867,7 +995,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'swagger',
+        name: 'Swagger',
         weight: 40,
         priority: 9010,
         since: 2017,//?
@@ -876,7 +1004,7 @@ export const skills: Skills = [
     },
 
     {
-        name: 'tailwindcss',
+        name: 'Tailwindcss',
         weight: 40,
         priority: 1020,
         since: 2017,//?
@@ -884,11 +1012,55 @@ export const skills: Skills = [
         icon: 'simple-icons:tailwindcss'
     },
     {
-        name: 'tsnode',
+        name: 'Tsnode',
         weight: 40,
         priority: 220,
         since: 2017,//?
         type: 'php', //?
         icon: 'simple-icons:tsnode'
+    },
+    {
+        name: 'Let\'s Encrypt',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        icon: 'letsencrypt'
+    },
+    {
+        name: 'Insta360',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        icon: 'insta360',
+        copyright: 'https://www.insta360.com/press/logo'
+    },
+    {
+        name: 'openai',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        // icon: 'simple-icon:openai',
+        icon: 'openai',
+    },
+    {
+        name: 'openssl',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        // icon: 'simple-icon:openssl',
+        icon: 'openssl',
+    },
+    {
+        name: 'swc',
+        weight: 40,
+        priority: 9000,
+        since: 2017,//?
+        type: 'php', //?
+        // icon: 'simple-icon:swc',
+        icon: 'swc',
     },
 ];

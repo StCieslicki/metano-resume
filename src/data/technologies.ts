@@ -39,7 +39,7 @@ export const technologies: EventBase[] = [
     {
         subject: '_Project management_',
         description: [
-            '*Jira* (RAPS, jit.team, cc) - practice',
+            '*Jira* (RASP, Jit.team, Clearcode) - practice',
             '*Trello*',
             '*Asana*',
             '*Redmine* - very long time ago :)'
@@ -160,7 +160,7 @@ export const technologies: EventBase[] = [
             '*Mural*',
             '*Miro*',
             '*Storyboards*'
-        ].join()
+        ].join(', ')
     },
     {
         subject: '_Knowledge management_',

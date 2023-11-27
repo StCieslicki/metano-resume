@@ -5,11 +5,26 @@ import photo from '@assets/images/fotka.png';
 import { Image } from '@astrojs/image/components';
 import logoImage from "../assets/images/logo.jpg";
 import {Icon} from "astro-icon";
+import {settings} from "../data/settings";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const data = skills.sort((b, a) => b.priority - a.priority)
+//filter out disabled
+let data = skills
+	.filter(item => item.disabled ? !item.disabled : true)
+
+//randomize skills
+if (settings.randomizeSkills) {
+	data = skills
+		.map(item => ({
+			...item,
+			priority: Math.floor(Math.random() * 1000),
+		}))
+}
+
+// sort by priority
+data = data.sort((b, a) => b.priority - a.priority)
 ---
 <style is:global>
 	div.description {
@@ -33,9 +48,9 @@ const data = skills.sort((b, a) => b.priority - a.priority)
 	</div>
 
 	<div class="w-full text-justify text-black dark:text-white lg:w-1/2">
-		<div class="mb-2 flex flex-wrap gap-3 items-stretch">
-			{skills.map(item => (
-				<div class="">
+		<div class="mb-2 flex flex-wrap gap-3 flex-row justify-between items-center">
+			{data.map(item => (
+				<div>
 				<Icon
 					class="h-8 hover:text-orange dark:hover:text-orange md:h-12 text-black dark:text-white"
 					name={item.icon}
@@ -43,6 +58,7 @@ const data = skills.sort((b, a) => b.priority - a.priority)
 				/>
 				</div>
 			))}
+			<div class="flex-auto" />
 		</div>
 	</div>
 </section>
