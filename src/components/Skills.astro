@@ -51,11 +51,14 @@ data = data.sort((b, a) => b.priority - a.priority)
 		<div class="mb-2 flex flex-wrap gap-3 flex-row justify-between items-center">
 			{data.map(item => (
 				<div>
-				<Icon
-					class="h-8 hover:text-orange dark:hover:text-orange md:h-12 text-black dark:text-white"
-					name={item.icon}
-					title={`${item.name} - ${item.priority}`}
-				/>
+					{item.name &&
+						<Icon
+							class="h-8 hover:text-orange dark:hover:text-orange md:h-12 text-black dark:text-white"
+							name={item.icon}
+							title={`${item.name} - ${item.priority}`}
+						/>
+					}
+				<!--	{item.priority} -->
 				</div>
 			))}
 			<div class="flex-auto" />

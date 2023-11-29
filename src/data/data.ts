@@ -1,5 +1,7 @@
 import { Events, SkillBase } from "./types";
 import { header as simpleHeader } from "./simpleHeader.js";
+import { responsibilites } from "./dictionaries/responsibilites";
+import {dictionary, SEPARATOR} from "./history";
 
 type Header = {
     title: string;
@@ -59,7 +61,26 @@ type Profile = string[];
 export const profile: Profile = [
     'Experienced and professional software developer boasting many years (8+ years) of valuable experience in software development, and working with clouds, platforms and data structures.',
     'Confident in your abilities, reliable, hardworking, and committed to results.',
-    'Willing to utilize his skills and put energy into his/her new position.'
+    'Willing to utilize his skills and put energy into his/her new position.',
+
+    // dictionary.softSkillsHeader,
+    dictionary.softSkillsHeader + [
+        responsibilites.soft.communication,
+        responsibilites.soft.collaboration,
+        responsibilites.soft.problemSolving,
+        responsibilites.soft.analyticalThinking,
+        responsibilites.soft.learningAndDevelopmentSkills,
+        responsibilites.soft.timeOrganisation,
+        // responsibilites.soft.initiative,
+        responsibilites.soft.creativity,
+        // responsibilites.soft.stressResilience,
+        // responsibilites.soft.customerOrientation,
+        responsibilites.soft.caringForQuality,
+        // responsibilites.soft.understandingOfTheBusiness,
+        responsibilites.soft.flexibility,
+        responsibilites.soft.empathy,
+    ].join(SEPARATOR),
+
 ];
 
 export const education:Events = [
